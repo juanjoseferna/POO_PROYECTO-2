@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="proyectoJuego"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\mingw32\;CMake Files\..\..\..\..\mingw32\lib\;CMake Files\..\..\..\..\mingw32\lib\cmake\;CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/finch/Desktop/AA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/finch/Desktop/AA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="proyectoJuego">
+				<Option output="C:/Users/finch/Desktop/AA/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/finch/Desktop/AA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/mingw32/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="proyectoJuego/fast">
+				<Option output="C:/Users/finch/Desktop/AA/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/finch/Desktop/AA/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/mingw32/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/include-fixed"/>
+					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego/fast"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/finch/Desktop/AA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/AA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/finch/Desktop/AA/Controller/Controller.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/Controller/Controller.h">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/Model/Jugador.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/Model/Jugador.h">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/View/View.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/View/View.h">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/main.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/AA/../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\mingw32\lib\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
