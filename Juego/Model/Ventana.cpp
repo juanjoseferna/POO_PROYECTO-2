@@ -77,7 +77,6 @@ void Ventana::crearVentana() {
     while (ventana.isOpen()){
         salida = false;
         sprite.setTexture(menu);
-        Event evento{};
         ventana.clear();
         ventana.draw(sprite);
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
@@ -111,10 +110,6 @@ void Ventana::crearVentana() {
                 sprite.getTexture() == &menuJugar){
                 menuDificultad();
             }
-        }
-        while (ventana.pollEvent(evento)){
-            if (evento.type == Event::Closed)
-                ventana.close();
         }
         ventana.display();
     }
