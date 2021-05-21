@@ -1,0 +1,626 @@
+        -:    0:Source:C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp
+        -:    0:Graph:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Model\Ventana.cpp.gcno
+        -:    0:Data:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Model\Ventana.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by finch on 20/05/2021.
+        -:    3://
+        -:    4:
+        -:    5:#include "Ventana.h"
+        -:    6:
+function _ZN7VentanaC2Ev called 1 returned 100% blocks executed 41%
+        2:    7:Ventana::Ventana() {
+        1:    7-block  0
+        1:    7-block  1
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    7-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    7-block  3
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:    7-block  4
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:    7-block  5
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:    7-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:    7-block  7
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:    7-block  8
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0 (throw)
+        1:    7-block  9
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:    7-block 10
+call   28 returned 1
+branch 29 taken 1 (fallthrough)
+branch 30 taken 0 (throw)
+    %%%%%:    7-block 11
+call   31 never executed
+    %%%%%:    7-block 12
+call   32 never executed
+    %%%%%:    7-block 13
+call   33 never executed
+    %%%%%:    7-block 14
+call   34 never executed
+    %%%%%:    7-block 15
+call   35 never executed
+    %%%%%:    7-block 16
+call   36 never executed
+    %%%%%:    7-block 17
+call   37 never executed
+    %%%%%:    7-block 18
+call   38 never executed
+    %%%%%:    7-block 19
+call   39 never executed
+    %%%%%:    7-block 20
+call   40 never executed
+        1:    8:    largo = 740;
+        1:    9:    ancho = 500;
+        1:   10:}
+        1:   10-block  0
+        -:   11:
+function _ZN7Ventana14menuDificultadEv called 1422928 returned 99% blocks executed 84%
+  1422928:   12:void Ventana::menuDificultad() {
+  1422928:   12-block  0
+  3936525:   13:    if (Mouse::getPosition(ventana).x >= x1Facil &&
+  1422928:   13-block  0
+call    0 returned 1422928
+branch  1 taken 395239 (fallthrough)
+branch  2 taken 695430
+  1422928:   13-block  1
+branch  3 taken 55175 (fallthrough)
+branch  4 taken 1367753
+  1485908:   14:        Mouse::getPosition(ventana).x <= x2Facil &&
+  1090669:   14-block  0
+call    0 returned 1090669
+branch  1 taken 55175 (fallthrough)
+branch  2 taken 340064
+  2908836:   15:        Mouse::getPosition(ventana).y >= y1Facil &&
+branch  0 taken 1090669 (fallthrough)
+branch  1 taken 332259
+   395239:   15-block  0
+call    2 returned 395239
+branch  3 taken 55175 (fallthrough)
+branch  4 taken 0
+    55175:   15-block  1
+  1367753:   15-block  2
+    55175:   16:        Mouse::getPosition(ventana).y <= y2Facil){
+    55175:   16-block  0
+call    0 returned 55175
+    55175:   17:        sprite2.setTexture(dificultadFacil);
+    55175:   17-block  0
+call    0 returned 55175
+    55175:   18:        ventana.draw(sprite2);
+call    0 returned 55175
+    55175:   19:        if (Mouse::isButtonPressed(Mouse::Left)){
+call    0 returned 55175
+        -:   20:        }
+  3837222:   21:    } else if (Mouse::getPosition(ventana).x >= x1Normal &&
+  1367753:   21-block  0
+call    0 returned 1367753
+branch  1 taken 699410 (fallthrough)
+branch  2 taken 402306
+  1367753:   21-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1367753
+  1801126:   22:               Mouse::getPosition(ventana).x <= x2Normal &&
+  1101716:   22-block  0
+call    0 returned 1101716
+branch  1 taken 0 (fallthrough)
+branch  2 taken 699410
+  3168879:   23:               Mouse::getPosition(ventana).y >= y1Normal &&
+branch  0 taken 1101716 (fallthrough)
+branch  1 taken 266037
+   699410:   23-block  0
+call    2 returned 699410
+branch  3 never executed
+branch  4 never executed
+    $$$$$:   23-block  1
+  1367753:   23-block  2
+    #####:   24:               Mouse::getPosition(ventana).y <= y2Normal) {
+    $$$$$:   24-block  0
+call    0 never executed
+    #####:   25:        sprite2.setTexture(dificultadNormal);
+    $$$$$:   25-block  0
+call    0 never executed
+    #####:   26:        ventana.draw(sprite2);
+call    0 never executed
+    #####:   27:        if (Mouse::isButtonPressed(Mouse::Left)) {
+call    0 never executed
+        -:   28:        }
+  2940165:   29:    } else if (Mouse::getPosition(ventana).x >= x1Volver &&
+  1367753:   29-block  0
+call    0 returned 1367753
+branch  1 taken 88995 (fallthrough)
+branch  2 taken 115664
+  1367753:   29-block  1
+branch  3 taken 31 (fallthrough)
+branch  4 taken 1367722
+   293654:   30:            Mouse::getPosition(ventana).x <= x2Volver &&
+   204659:   30-block  0
+call    0 returned 204659
+branch  1 taken 17729 (fallthrough)
+branch  2 taken 71266
+  1661407:   31:            Mouse::getPosition(ventana).y >= y1Volver &&
+branch  0 taken 204659 (fallthrough)
+branch  1 taken 1163094
+    88995:   31-block  0
+call    2 returned 88995
+branch  3 taken 31 (fallthrough)
+branch  4 taken 17698
+       31:   31-block  1
+  1367722:   31-block  2
+    17729:   32:            Mouse::getPosition(ventana).y <= y2Volver){
+    17729:   32-block  0
+call    0 returned 17729
+       31:   33:        sprite2.setTexture(dificultadVolver);
+       31:   33-block  0
+call    0 returned 31
+       31:   34:        ventana.draw(sprite2);
+call    0 returned 31
+       31:   35:        if (Mouse::isButtonPressed(Mouse::Left)){
+call    0 returned 31
+branch  1 taken 0 (fallthrough)
+branch  2 taken 31
+    #####:   36:            salida = true;
+    $$$$$:   36-block  0
+        -:   37:        }
+        -:   38:    } else {
+  1367722:   39:        sprite2.setTexture(dificultad);
+  1367722:   39-block  0
+call    0 returned 1367722
+  1367722:   40:        ventana.draw(sprite);
+call    0 returned 1367721
+        -:   41:    }
+  1422927:   42:}
+        -:   43:
+function _ZN7Ventana12crearVentanaEv called 1 returned 0% blocks executed 55%
+        1:   44:void Ventana::crearVentana() {
+        1:   44-block  0
+        1:   45:    ventana.create(VideoMode(largo, ancho), "La guerra de los flip flops");
+        1:   45-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   45-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   45-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   45-block  3
+call   11 returned 1
+call   12 returned 1
+    %%%%%:   45-block  4
+    %%%%%:   45-block  5
+call   13 never executed
+    %%%%%:   45-block  6
+    %%%%%:   45-block  7
+call   14 never executed
+    %%%%%:   45-block  8
+    %%%%%:   45-block  9
+call   15 never executed
+        1:   46:    menu.loadFromFile("../Img/estrellas.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   46-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   46-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   46-block  2
+call   10 never executed
+    %%%%%:   46-block  3
+    %%%%%:   46-block  4
+call   11 never executed
+    %%%%%:   46-block  5
+    %%%%%:   46-block  6
+call   12 never executed
+        1:   47:    menuSalida.loadFromFile("../Img/estrellasSalida.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   47-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   47-block  2
+call   10 never executed
+    %%%%%:   47-block  3
+    %%%%%:   47-block  4
+call   11 never executed
+    %%%%%:   47-block  5
+    %%%%%:   47-block  6
+call   12 never executed
+        1:   48:    menuInicio.loadFromFile("../Img/estrellasJugar.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   48-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   48-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   48-block  2
+call   10 never executed
+    %%%%%:   48-block  3
+    %%%%%:   48-block  4
+call   11 never executed
+    %%%%%:   48-block  5
+    %%%%%:   48-block  6
+call   12 never executed
+        1:   49:    icono.loadFromFile("../Img/Icono.png");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   49-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   49-block  1
+call    7 returned 1
+call    8 returned 1
+    %%%%%:   49-block  2
+call    9 never executed
+    %%%%%:   49-block  3
+    %%%%%:   49-block  4
+call   10 never executed
+    %%%%%:   49-block  5
+call   11 never executed
+        1:   50:    dificultad.loadFromFile("../Img/Dificultad.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   50-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   50-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   50-block  2
+call   10 never executed
+    %%%%%:   50-block  3
+    %%%%%:   50-block  4
+call   11 never executed
+    %%%%%:   50-block  5
+    %%%%%:   50-block  6
+call   12 never executed
+        1:   51:    dificultadNormal.loadFromFile("../Img/Normal.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   51-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   51-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   51-block  2
+call   10 never executed
+    %%%%%:   51-block  3
+    %%%%%:   51-block  4
+call   11 never executed
+    %%%%%:   51-block  5
+    %%%%%:   51-block  6
+call   12 never executed
+        1:   52:    dificultadFacil.loadFromFile("../Img/Facil.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   52-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   52-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   52-block  2
+call   10 never executed
+    %%%%%:   52-block  3
+    %%%%%:   52-block  4
+call   11 never executed
+    %%%%%:   52-block  5
+    %%%%%:   52-block  6
+call   12 never executed
+        1:   53:    dificultadVolver.loadFromFile("../Img/Volver.jpg");
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   53-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   53-block  1
+call    8 returned 1
+call    9 returned 1
+    %%%%%:   53-block  2
+call   10 never executed
+    %%%%%:   53-block  3
+    %%%%%:   53-block  4
+call   11 never executed
+    %%%%%:   53-block  5
+    %%%%%:   53-block  6
+call   12 never executed
+        1:   54:    ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+      584:   55:    while (ventana.isOpen()){
+      584:   55-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0
+      583:   55-block  1
+      584:   56:        salida = false;
+      584:   57:        sprite.setTexture(menu);
+      584:   57-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   58:        Event evento{};
+      584:   59:        ventana.clear();
+      584:   59-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   59-block  1
+call    3 returned 584
+branch  4 taken 584 (fallthrough)
+branch  5 taken 0 (throw)
+    %%%%%:   59-block  2
+      584:   60:        ventana.draw(sprite);
+      584:   60-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   61:        if (Keyboard::isKeyPressed(Keyboard::Escape)){
+      584:   61-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   61-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 584
+    #####:   62:            ventana.close();
+    $$$$$:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   62-block  1
+        -:   63:        }
+     1752:   64:        if (Mouse::getPosition(ventana).x >= x1Salida &&
+      584:   64-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   64-block  1
+branch  3 taken 584 (fallthrough)
+branch  4 taken 0
+      584:   64-block  2
+branch  5 taken 0 (fallthrough)
+branch  6 taken 584
+     1168:   65:            Mouse::getPosition(ventana).x <= x2Salida &&
+      584:   65-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   65-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 584
+     1752:   66:            Mouse::getPosition(ventana).y >= y1Salida &&
+      584:   66-block  0
+branch  0 taken 584 (fallthrough)
+branch  1 taken 0
+      584:   66-block  1
+call    2 returned 584
+branch  3 taken 584 (fallthrough)
+branch  4 taken 0 (throw)
+    $$$$$:   66-block  2
+branch  5 never executed
+branch  6 never executed
+    $$$$$:   66-block  3
+      584:   66-block  4
+    #####:   67:            Mouse::getPosition(ventana).y <= y2Salida){
+    $$$$$:   67-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   68:            sprite2.setTexture(menuSalida);
+    $$$$$:   68-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   69:            ventana.draw(sprite2);
+    $$$$$:   69-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   70:            if (Mouse::isButtonPressed(Mouse::Left)){
+    $$$$$:   70-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   70-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:   71:                ventana.close();
+    $$$$$:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   71-block  1
+        -:   72:            }
+     1752:   73:        } else if (Mouse::getPosition(ventana).x >= x1Inico &&
+      584:   73-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   73-block  1
+branch  3 taken 584 (fallthrough)
+branch  4 taken 0
+      584:   73-block  2
+branch  5 taken 584 (fallthrough)
+branch  6 taken 0
+     1168:   74:            Mouse::getPosition(ventana).x <= x2Inicio &&
+      584:   74-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   74-block  1
+branch  3 taken 584 (fallthrough)
+branch  4 taken 0
+     1752:   75:            Mouse::getPosition(ventana).y >= y1Inicio &&
+      584:   75-block  0
+branch  0 taken 584 (fallthrough)
+branch  1 taken 0
+      584:   75-block  1
+call    2 returned 584
+branch  3 taken 584 (fallthrough)
+branch  4 taken 0 (throw)
+      584:   75-block  2
+branch  5 taken 584 (fallthrough)
+branch  6 taken 0
+      584:   75-block  3
+    $$$$$:   75-block  4
+      584:   76:            Mouse::getPosition(ventana).y <= y2Inicio){
+      584:   76-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   77:            sprite2.setTexture(menuInicio);
+      584:   77-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   78:            ventana.draw(sprite2);
+      584:   78-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   79:            if (Mouse::isButtonPressed(Mouse::Left)){
+      584:   79-block  0
+call    0 returned 584
+branch  1 taken 584 (fallthrough)
+branch  2 taken 0 (throw)
+      584:   79-block  1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 583
+  1422928:   80:                while (!salida){
+  1422928:   80-block  0
+branch  0 taken 1422928 (fallthrough)
+branch  1 taken 0
+  1422927:   80-block  1
+  1422928:   81:                    if (Mouse::getPosition(ventana).x >= x1Facil &&
+  1422928:   81-block  0
+call    0 returned 1422927
+branch  1 taken 1422927 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   82:                        Mouse::getPosition(ventana).x <= x2Facil &&
+        -:   83:                        Mouse::getPosition(ventana).y >= y1Facil &&
+        -:   84:                        Mouse::getPosition(ventana).y <= y2Facil){
+      609:   85:                        sprite2.setTexture(dificultadFacil);
+      609:   85-block  0
+call    0 returned 609
+branch  1 taken 609 (fallthrough)
+branch  2 taken 0 (throw)
+      609:   85-block  1
+branch  3 taken 26 (fallthrough)
+branch  4 taken 583
+       26:   85-block  2
+       26:   86:                        ventana.draw(sprite2);
+       26:   86-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 26
+    #####:   87:                        if (Mouse::isButtonPressed(Mouse::Left)){
+    $$$$$:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   87-block  1
+        -:   88:                        }
+      583:   89:                    } else if (Mouse::getPosition(ventana).x >= x1Normal &&
+      583:   89-block  0
+call    0 returned 583
+branch  1 taken 583 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   90:                               Mouse::getPosition(ventana).x <= x2Normal &&
+        -:   91:                               Mouse::getPosition(ventana).y >= y1Normal &&
+    #####:   92:                               Mouse::getPosition(ventana).y <= y2Normal) {
+    $$$$$:   92-block  0
+        -:   93:                        sprite2.setTexture(dificultadNormal);
+        -:   94:                        ventana.draw(sprite2);
+        -:   95:                        if (Mouse::isButtonPressed(Mouse::Left)) {
+        -:   96:                        }
+        -:   97:                    } else if (Mouse::getPosition(ventana).x >= x1Volver &&
+        -:   98:                               Mouse::getPosition(ventana).x <= x2Volver &&
+        -:   99:                               Mouse::getPosition(ventana).y >= y1Volver &&
+        -:  100:                               Mouse::getPosition(ventana).y <= y2Volver){
+        -:  101:                        sprite2.setTexture(dificultadVolver);
+        -:  102:                        ventana.draw(sprite2);
+        -:  103:                        if (Mouse::isButtonPressed(Mouse::Left)){
+        -:  104:                            salida = true;
+        -:  105:                        }
+        -:  106:                    } else {
+        -:  107:                        sprite2.setTexture(dificultad);
+        -:  108:                        ventana.draw(sprite);
+        -:  109:                    }
+        -:  110:                }
+        -:  111:            }
+        -:  112:        }
+        -:  113:        while (ventana.pollEvent(evento)){
+        -:  114:            if (evento.type == Event::Closed)
+        -:  115:                ventana.close();
+        -:  116:        }
+        -:  117:        ventana.display();
+        -:  118:    }
+        -:  119:
+        -:  120:}

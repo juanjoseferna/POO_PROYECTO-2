@@ -1,0 +1,52 @@
+        -:    0:Source:C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h
+        -:    0:Graph:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by finch on 20/05/2021.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef PROYECTOJUEGO_VENTANA_H
+        -:    6:#define PROYECTOJUEGO_VENTANA_H
+        -:    7:
+        -:    8:#include <SFML/Graphics.hpp>
+        -:    9:
+        -:   10:using namespace sf;
+        -:   11:
+        -:   12:
+function _ZN7VentanaD1Ev called 0 returned 0% blocks executed 0%
+    #####:   13:class Ventana {
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+call    9 never executed
+call   10 never executed
+        -:   14:private:
+        -:   15:    RenderWindow ventana;
+        -:   16:    int ancho, largo;
+        -:   17:    int x1Inico = 224, x2Inicio = 503, y1Inicio = 191, y2Inicio = 273;
+        -:   18:    int x1Salida = 244, x2Salida = 480, y1Salida = 308, y2Salida = 376;
+        -:   19:    int x1Facil = 284, x2Facil = 464, y1Facil = 204, y2Facil = 260;
+        -:   20:    int x1Normal = 223, x2Normal = 508, y1Normal = 306, y2Normal = 360;
+        -:   21:    int x1Volver = 570, x2Volver = 715, y1Volver = 433, y2Volver = 469;
+        -:   22:    bool salida;
+        -:   23:    Texture menu, menuSalida, menuInicio, dificultad, dificultadFacil, dificultadNormal, dificultadVolver;
+        -:   24:    Image icono;
+        -:   25:    Sprite sprite, sprite2;
+        -:   26:public:
+        -:   27:    Ventana();
+        -:   28:    void crearVentana();
+        -:   29:    void menuDificultad();
+        -:   30:};
+        -:   31:
+        -:   32:
+        -:   33:#endif //PROYECTOJUEGO_VENTANA_H

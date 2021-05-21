@@ -1,0 +1,26 @@
+        -:    0:Source:C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Controller/Controller.cpp
+        -:    0:Graph:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Controller\Controller.cpp.gcno
+        -:    0:Data:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Controller\Controller.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by finch on 20/05/2021.
+        -:    3://
+        -:    4:
+        -:    5:#include "Controller.h"
+        -:    6:
+function _ZN10ControllerC2Ev called 1 returned 100% blocks executed 100%
+        2:    7:Controller::Controller() {
+        1:    7-block  0
+        1:    7-block  1
+call    0 returned 1
+        -:    8:
+        1:    9:}
+        -:   10:
+function _ZN10Controller14iniciarVentanaEv called 1 returned 0% blocks executed 100%
+        1:   11:void Controller::iniciarVentana() {
+        1:   11-block  0
+        1:   12:    ventana.crearVentana();
+        1:   12-block  0
+call    0 returned 0
+    #####:   13:}

@@ -1,0 +1,166 @@
+        -:    0:Source:C:/mingw32/include/SFML/Graphics/Rect.inl
+        -:    0:Graph:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Model\Ventana.cpp.gcno
+        -:    0:Data:C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug-coverage\CMakeFiles\proyectoJuego.dir\Model\Ventana.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:////////////////////////////////////////////////////////////
+        -:    2://
+        -:    3:// SFML - Simple and Fast Multimedia Library
+        -:    4:// Copyright (C) 2007-2018 Laurent Gomila (laurent@sfml-dev.org)
+        -:    5://
+        -:    6:// This software is provided 'as-is', without any express or implied warranty.
+        -:    7:// In no event will the authors be held liable for any damages arising from the use of this software.
+        -:    8://
+        -:    9:// Permission is granted to anyone to use this software for any purpose,
+        -:   10:// including commercial applications, and to alter it and redistribute it freely,
+        -:   11:// subject to the following restrictions:
+        -:   12://
+        -:   13:// 1. The origin of this software must not be misrepresented;
+        -:   14://    you must not claim that you wrote the original software.
+        -:   15://    If you use this software in a product, an acknowledgment
+        -:   16://    in the product documentation would be appreciated but is not required.
+        -:   17://
+        -:   18:// 2. Altered source versions must be plainly marked as such,
+        -:   19://    and must not be misrepresented as being the original software.
+        -:   20://
+        -:   21:// 3. This notice may not be removed or altered from any source distribution.
+        -:   22://
+        -:   23:////////////////////////////////////////////////////////////
+        -:   24:
+        -:   25:
+        -:   26:////////////////////////////////////////////////////////////
+        -:   27:template <typename T>
+function _ZN2sf4RectIiEC1Ev called 7 returned 100% blocks executed 100%
+        7:   28:Rect<T>::Rect() :
+        7:   28-block  0
+        -:   29:left  (0),
+        -:   30:top   (0),
+        -:   31:width (0),
+        7:   32:height(0)
+        -:   33:{
+        -:   34:
+        7:   35:}
+        -:   36:
+        -:   37:
+        -:   38:////////////////////////////////////////////////////////////
+        -:   39:template <typename T>
+        -:   40:Rect<T>::Rect(T rectLeft, T rectTop, T rectWidth, T rectHeight) :
+        -:   41:left  (rectLeft),
+        -:   42:top   (rectTop),
+        -:   43:width (rectWidth),
+        -:   44:height(rectHeight)
+        -:   45:{
+        -:   46:
+        -:   47:}
+        -:   48:
+        -:   49:
+        -:   50:////////////////////////////////////////////////////////////
+        -:   51:template <typename T>
+        -:   52:Rect<T>::Rect(const Vector2<T>& position, const Vector2<T>& size) :
+        -:   53:left  (position.x),
+        -:   54:top   (position.y),
+        -:   55:width (size.x),
+        -:   56:height(size.y)
+        -:   57:{
+        -:   58:
+        -:   59:}
+        -:   60:
+        -:   61:
+        -:   62:////////////////////////////////////////////////////////////
+        -:   63:template <typename T>
+        -:   64:template <typename U>
+        -:   65:Rect<T>::Rect(const Rect<U>& rectangle) :
+        -:   66:left  (static_cast<T>(rectangle.left)),
+        -:   67:top   (static_cast<T>(rectangle.top)),
+        -:   68:width (static_cast<T>(rectangle.width)),
+        -:   69:height(static_cast<T>(rectangle.height))
+        -:   70:{
+        -:   71:}
+        -:   72:
+        -:   73:
+        -:   74:////////////////////////////////////////////////////////////
+        -:   75:template <typename T>
+        -:   76:bool Rect<T>::contains(T x, T y) const
+        -:   77:{
+        -:   78:    // Rectangles with negative dimensions are allowed, so we must handle them correctly
+        -:   79:
+        -:   80:    // Compute the real min and max of the rectangle on both axes
+        -:   81:    T minX = std::min(left, static_cast<T>(left + width));
+        -:   82:    T maxX = std::max(left, static_cast<T>(left + width));
+        -:   83:    T minY = std::min(top, static_cast<T>(top + height));
+        -:   84:    T maxY = std::max(top, static_cast<T>(top + height));
+        -:   85:
+        -:   86:    return (x >= minX) && (x < maxX) && (y >= minY) && (y < maxY);
+        -:   87:}
+        -:   88:
+        -:   89:
+        -:   90:////////////////////////////////////////////////////////////
+        -:   91:template <typename T>
+        -:   92:bool Rect<T>::contains(const Vector2<T>& point) const
+        -:   93:{
+        -:   94:    return contains(point.x, point.y);
+        -:   95:}
+        -:   96:
+        -:   97:
+        -:   98:////////////////////////////////////////////////////////////
+        -:   99:template <typename T>
+        -:  100:bool Rect<T>::intersects(const Rect<T>& rectangle) const
+        -:  101:{
+        -:  102:    Rect<T> intersection;
+        -:  103:    return intersects(rectangle, intersection);
+        -:  104:}
+        -:  105:
+        -:  106:
+        -:  107:////////////////////////////////////////////////////////////
+        -:  108:template <typename T>
+        -:  109:bool Rect<T>::intersects(const Rect<T>& rectangle, Rect<T>& intersection) const
+        -:  110:{
+        -:  111:    // Rectangles with negative dimensions are allowed, so we must handle them correctly
+        -:  112:
+        -:  113:    // Compute the min and max of the first rectangle on both axes
+        -:  114:    T r1MinX = std::min(left, static_cast<T>(left + width));
+        -:  115:    T r1MaxX = std::max(left, static_cast<T>(left + width));
+        -:  116:    T r1MinY = std::min(top, static_cast<T>(top + height));
+        -:  117:    T r1MaxY = std::max(top, static_cast<T>(top + height));
+        -:  118:
+        -:  119:    // Compute the min and max of the second rectangle on both axes
+        -:  120:    T r2MinX = std::min(rectangle.left, static_cast<T>(rectangle.left + rectangle.width));
+        -:  121:    T r2MaxX = std::max(rectangle.left, static_cast<T>(rectangle.left + rectangle.width));
+        -:  122:    T r2MinY = std::min(rectangle.top, static_cast<T>(rectangle.top + rectangle.height));
+        -:  123:    T r2MaxY = std::max(rectangle.top, static_cast<T>(rectangle.top + rectangle.height));
+        -:  124:
+        -:  125:    // Compute the intersection boundaries
+        -:  126:    T interLeft   = std::max(r1MinX, r2MinX);
+        -:  127:    T interTop    = std::max(r1MinY, r2MinY);
+        -:  128:    T interRight  = std::min(r1MaxX, r2MaxX);
+        -:  129:    T interBottom = std::min(r1MaxY, r2MaxY);
+        -:  130:
+        -:  131:    // If the intersection is valid (positive non zero area), then there is an intersection
+        -:  132:    if ((interLeft < interRight) && (interTop < interBottom))
+        -:  133:    {
+        -:  134:        intersection = Rect<T>(interLeft, interTop, interRight - interLeft, interBottom - interTop);
+        -:  135:        return true;
+        -:  136:    }
+        -:  137:    else
+        -:  138:    {
+        -:  139:        intersection = Rect<T>(0, 0, 0, 0);
+        -:  140:        return false;
+        -:  141:    }
+        -:  142:}
+        -:  143:
+        -:  144:
+        -:  145:////////////////////////////////////////////////////////////
+        -:  146:template <typename T>
+        -:  147:inline bool operator ==(const Rect<T>& left, const Rect<T>& right)
+        -:  148:{
+        -:  149:    return (left.left == right.left) && (left.width == right.width) &&
+        -:  150:           (left.top == right.top) && (left.height == right.height);
+        -:  151:}
+        -:  152:
+        -:  153:
+        -:  154:////////////////////////////////////////////////////////////
+        -:  155:template <typename T>
+        -:  156:inline bool operator !=(const Rect<T>& left, const Rect<T>& right)
+        -:  157:{
+        -:  158:    return !(left == right);
+        -:  159:}
