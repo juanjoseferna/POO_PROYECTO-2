@@ -69,14 +69,15 @@ void Ventana::crearVentana() {
     menuSalida.loadFromFile("../Img/estrellasSalida.jpg");
     menuJugar.loadFromFile("../Img/estrellasJugar.jpg");
     icono.loadFromFile("../Img/Icono.png");
-    dificultad.loadFromFile("../Img/Dificultad.jpg");
-    dificultadNormal.loadFromFile("../Img/Normal.jpg");
-    dificultadFacil.loadFromFile("../Img/Facil.jpg");
-    dificultadVolver.loadFromFile("../Img/Volver.jpg");
+    dificultad.loadFromFile("../Img/dificultad.jpg");
+    dificultadNormal.loadFromFile("../Img/normal.jpg");
+    dificultadFacil.loadFromFile("../Img/facil.jpg");
+    dificultadVolver.loadFromFile("../Img/volver.jpg");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
     while (ventana.isOpen()){
         salida = false;
         sprite.setTexture(menu);
+        Event evento{};
         ventana.clear();
         ventana.draw(sprite);
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
@@ -110,6 +111,10 @@ void Ventana::crearVentana() {
                 sprite.getTexture() == &menuJugar){
                 menuDificultad();
             }
+        }
+        while (ventana.pollEvent(evento)){
+            if (evento.type == Event::Closed)
+                ventana.close();
         }
         ventana.display();
     }
