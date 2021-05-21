@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.obj"
+  "CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/View/View.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/main.cpp.obj"
   "libproyectoJuego.dll.a"

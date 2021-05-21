@@ -5,9 +5,15 @@
 #ifndef PROYECTOJUEGO_VIEW_H
 #define PROYECTOJUEGO_VIEW_H
 
+#include "../Controller/Controller.h"
 
-class View {
 
+class Viewer {
+private:
+    Controller controller;
+public:
+    Viewer();
+    void iniciar();
 };
 
 

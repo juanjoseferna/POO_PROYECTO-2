@@ -195,6 +195,33 @@ Model/Jugador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.s
 .PHONY : Model/Jugador.cpp.s
 
+Model/Ventana.obj: Model/Ventana.cpp.obj
+
+.PHONY : Model/Ventana.obj
+
+# target to build an object file
+Model/Ventana.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj
+.PHONY : Model/Ventana.cpp.obj
+
+Model/Ventana.i: Model/Ventana.cpp.i
+
+.PHONY : Model/Ventana.i
+
+# target to preprocess a source file
+Model/Ventana.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.i
+.PHONY : Model/Ventana.cpp.i
+
+Model/Ventana.s: Model/Ventana.cpp.s
+
+.PHONY : Model/Ventana.s
+
+# target to generate assembly for a file
+Model/Ventana.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.s
+.PHONY : Model/Ventana.cpp.s
+
 View/View.obj: View/View.cpp.obj
 
 .PHONY : View/View.obj
@@ -264,6 +291,9 @@ help:
 	@echo ... Model/Jugador.obj
 	@echo ... Model/Jugador.i
 	@echo ... Model/Jugador.s
+	@echo ... Model/Ventana.obj
+	@echo ... Model/Ventana.i
+	@echo ... Model/Ventana.s
 	@echo ... View/View.obj
 	@echo ... View/View.i
 	@echo ... View/View.s

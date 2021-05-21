@@ -3,3 +3,11 @@
 //
 
 #include "Controller.h"
+
+Controller::Controller() {
+
+}
+
+void Controller::iniciarVentana() {
+    ventana.crearVentana();
+}

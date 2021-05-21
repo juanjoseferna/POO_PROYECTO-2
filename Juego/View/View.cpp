@@ -3,3 +3,11 @@
 //
 
 #include "View.h"
+
+Viewer::Viewer() {
+}
+
+void Viewer::iniciar() {
+    controller.iniciarVentana();
+}
+

@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h">
+			<Option target="proyectoJuego"/>
+		</Unit>
 		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>

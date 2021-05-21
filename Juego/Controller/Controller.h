@@ -5,8 +5,14 @@
 #ifndef PROYECTOJUEGO_CONTROLLER_H
 #define PROYECTOJUEGO_CONTROLLER_H
 
-class Controller{
+#include "../Model/Ventana.h"
 
+class Controller{
+private:
+    Ventana ventana;
+public:
+    Controller();
+    void iniciarVentana();
 };
 
 #endif //PROYECTOJUEGO_CONTROLLER_H
