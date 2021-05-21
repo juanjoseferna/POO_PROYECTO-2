@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Controller/Controller.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
-  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.obj"
-  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"
-  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/View/View.cpp.obj"
-  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/main.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/main.cpp.obj"
+  "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Controller/Controller.cpp" "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
+  "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.cpp" "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.obj"
+  "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Ventana.cpp" "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"
+  "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/View/View.cpp" "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/View/View.cpp.obj"
+  "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/main.cpp" "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

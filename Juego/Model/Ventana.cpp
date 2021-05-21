@@ -3,10 +3,10 @@
 //
 
 #include "Ventana.h"
+const int Ventana::ancho = 1280;
+const int Ventana::alto = 804;
 
 Ventana::Ventana() {
-    largo = 740;
-    ancho = 500;
 }
 
 void Ventana::menuDificultad() {
@@ -16,8 +16,8 @@ void Ventana::menuDificultad() {
         }
         sprite.setTexture(dificultad);
         ventana.draw(sprite);
-        if (Mouse::getPosition(ventana).x >= x1Facil &&
-            Mouse::getPosition(ventana).x <= x2Facil &&
+        if (Mouse::getPosition(ventana).x >= x1Global &&
+            Mouse::getPosition(ventana).x <= x2Global &&
             Mouse::getPosition(ventana).y >= y1Facil &&
             Mouse::getPosition(ventana).y <= y2Facil &&
             (sprite.getTexture() == &dificultad ||
@@ -30,8 +30,8 @@ void Ventana::menuDificultad() {
             if (Mouse::isButtonPressed(Mouse::Left)){
                 salida = true;
             }
-        } else if (Mouse::getPosition(ventana).x >= x1Normal &&
-                   Mouse::getPosition(ventana).x <= x2Normal &&
+        } else if (Mouse::getPosition(ventana).x >= x1Global &&
+                   Mouse::getPosition(ventana).x <= x2Global &&
                    Mouse::getPosition(ventana).y >= y1Normal &&
                    Mouse::getPosition(ventana).y <= y2Normal &&
                    (sprite.getTexture() == &dificultad ||
@@ -44,8 +44,8 @@ void Ventana::menuDificultad() {
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 salida = true;
             }
-        } else if (Mouse::getPosition(ventana).x >= x1Volver &&
-                   Mouse::getPosition(ventana).x <= x2Volver &&
+        } else if (Mouse::getPosition(ventana).x >= x1Global &&
+                   Mouse::getPosition(ventana).x <= x2Global &&
                    Mouse::getPosition(ventana).y >= y1Volver &&
                    Mouse::getPosition(ventana).y <= y2Volver &&
                    (sprite.getTexture() == &dificultad ||
@@ -64,15 +64,15 @@ void Ventana::menuDificultad() {
 }
 
 void Ventana::crearVentana() {
-    ventana.create(VideoMode(largo, ancho), "La guerra de los flip flops");
-    menu.loadFromFile("../Img/estrellas.jpg");
-    menuSalida.loadFromFile("../Img/estrellasSalida.jpg");
-    menuJugar.loadFromFile("../Img/estrellasJugar.jpg");
+    ventana.create(VideoMode(ancho, alto), "LA GUERRA DE LOS FLIP FLOPS");
+    menu.loadFromFile("../Img/mainMenu.png");
+    menuSalida.loadFromFile("../Img/seleccionarSalir.png");
+    menuJugar.loadFromFile("../Img/seleccionarIniciar.png");
     icono.loadFromFile("../Img/Icono.png");
-    dificultad.loadFromFile("../Img/dificultad.jpg");
-    dificultadNormal.loadFromFile("../Img/normal.jpg");
-    dificultadFacil.loadFromFile("../Img/facil.jpg");
-    dificultadVolver.loadFromFile("../Img/volver.jpg");
+    dificultad.loadFromFile("../Img/menuJugador.png");
+    dificultadNormal.loadFromFile("../Img/opcionInfernal.png");
+    dificultadFacil.loadFromFile("../Img/opcionPesadilla.png");
+    dificultadVolver.loadFromFile("../Img/opcionRegresar.png");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
     while (ventana.isOpen()){
         salida = false;
@@ -83,8 +83,8 @@ void Ventana::crearVentana() {
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
             ventana.close();
         }
-        if (Mouse::getPosition(ventana).x >= x1Salida &&
-                Mouse::getPosition(ventana).x <= x2Salida &&
+        if (Mouse::getPosition(ventana).x >= x1Global &&
+                Mouse::getPosition(ventana).x <= x2Global &&
                 Mouse::getPosition(ventana).y >= y1Salida &&
                 Mouse::getPosition(ventana).y <= y2Salida &&
                 (sprite.getTexture() == &menu ||
@@ -97,8 +97,8 @@ void Ventana::crearVentana() {
                 sprite.getTexture() == &menuSalida){
                 ventana.close();
             }
-        } else if (Mouse::getPosition(ventana).x >= x1Inico &&
-                Mouse::getPosition(ventana).x <= x2Inicio &&
+        } else if (Mouse::getPosition(ventana).x >= x1Global &&
+                Mouse::getPosition(ventana).x <= x2Global &&
                 Mouse::getPosition(ventana).y >= y1Inicio &&
                 Mouse::getPosition(ventana).y <= y2Inicio &&
                 (sprite.getTexture() == &menu ||

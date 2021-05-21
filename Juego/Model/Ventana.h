@@ -11,13 +11,13 @@ using namespace sf;
 
 class Ventana {
 private:
-    RenderWindow ventana;
-    int ancho, largo;
-    int x1Inico = 224, x2Inicio = 503, y1Inicio = 191, y2Inicio = 273; //TODO: cambiar las imagenes a unas mas bonitas
-    int x1Salida = 244, x2Salida = 480, y1Salida = 308, y2Salida = 376;//Con eso cambiar estas variables
-    int x1Facil = 284, x2Facil = 464, y1Facil = 204, y2Facil = 260;    //Provisional
-    int x1Normal = 223, x2Normal = 508, y1Normal = 306, y2Normal = 360;//Provisional
-    int x1Volver = 570, x2Volver = 715, y1Volver = 433, y2Volver = 469;//Provisional
+    RenderWindow ventana;  // aqui se crea la ventana que se va a desplegar una vez vayamos a jugar
+    const static int ancho, alto;  // variables que definen el ancho y alto de la ventana
+    int x1Global = 518, x2Global = 766, y1Inicio = 374, y2Inicio = 445; // se crean dos variables en el eje x que van a ser las mismas para todos los botones y sus respectivos puntos en y.
+    int y1Salida = 473, y2Salida = 543; // variables que representan los puntos y del boton salir.
+    int y1Facil = 375, y2Facil = 443;   // variables que representan los puntos y del boton pesadilla.
+    int y1Normal = 473, y2Normal = 540; // variables que representan los puntos y del boton infernal.
+    int y1Volver = 570, y2Volver = 639; // variables que representan los puntos y del boton regresar.
     bool salida;
     Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver;
     Image icono;
