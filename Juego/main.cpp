@@ -1,11 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "View/View.h"
 
 using namespace sf;
 
 int main() {
-    RenderWindow w(VideoMode(750,500),"Prueba");
-    sleep(milliseconds(20000));
-    std::cout << "Hello, World!" << std::endl;
+    View vista;
     return 0;
 }
