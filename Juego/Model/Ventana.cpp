@@ -6,8 +6,7 @@
 const int Ventana::ancho = 1280;
 const int Ventana::alto = 804;
 
-Ventana::Ventana() {
-}
+Ventana::Ventana() = default;
 
 void Ventana::menuDificultad() {
     while (!salida){
@@ -58,7 +57,10 @@ void Ventana::menuDificultad() {
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 salida = true;
             }
-        }
+        }else {
+            sprite.setTexture(dificultad);
+            ventana.draw(sprite);
+            }
         ventana.display();
     }
 }
@@ -73,8 +75,14 @@ void Ventana::crearVentana() {
     dificultadNormal.loadFromFile("../Img/opcionInfernal.png");
     dificultadFacil.loadFromFile("../Img/opcionPesadilla.png");
     dificultadVolver.loadFromFile("../Img/opcionRegresar.png");
+    pj.loadFromFile("../Img/personaje.png");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
+    cordX = ancho/2;
+    cordY = alto/2;
+    nave.setTexture(pj);
+    nave.setPosition(cordX, cordY);
     while (ventana.isOpen()){
+        nave.setTextureRect(IntRect(a,b,c,d));
         salida = false;
         sprite.setTexture(menu);
         Event evento{};
@@ -116,7 +124,35 @@ void Ventana::crearVentana() {
             if (evento.type == Event::Closed)
                 ventana.close();
         }
+        if (reloj.getElapsedTime().asSeconds() > 0.5f){
+            a += 48;
+            reloj.restart();
+        }
+        moverse();
+        ventana.draw(nave);
         ventana.display();
     }
 
+}
+
+void Ventana::moverse() {
+    if (Keyboard::isKeyPressed(Keyboard::Right)) {
+        cordY += 0.1;
+        b = 96;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::Left)) {
+        cordY -= 0.1;
+        b = 48;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::Up)) {
+        cordX -= 0.1;
+        b = 144;
+    }
+    if (Keyboard::isKeyPressed(Keyboard::Down)){
+        cordX += 0.1;
+        b = 0;
+    }
+    if (a > 96)
+        a = 0;
+    nave.setPosition(cordY,cordX);
 }

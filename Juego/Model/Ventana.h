@@ -6,6 +6,7 @@
 #define PROYECTOJUEGO_VENTANA_H
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 using namespace sf;
 
@@ -18,14 +19,19 @@ private:
     int y1Facil = 375, y2Facil = 443;   // variables que representan los puntos y del boton pesadilla.
     int y1Normal = 473, y2Normal = 540; // variables que representan los puntos y del boton infernal.
     int y1Volver = 570, y2Volver = 639; // variables que representan los puntos y del boton regresar.
-    bool salida;
-    Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver;
+    float cordX, cordY;
+    int a = 0, b = 0, c = 48, d = 48;
+    bool salida{};
+    Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver, pj;
     Image icono;
-    Sprite sprite;
+    Clock reloj;
+    Sprite sprite, nave;
+    IntRect rectSource;
 public:
     Ventana();
     void crearVentana();
     void menuDificultad();
+    void moverse();
 };
 
 
