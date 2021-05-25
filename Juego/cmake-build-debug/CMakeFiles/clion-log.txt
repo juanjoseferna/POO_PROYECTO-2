@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego
+"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\finch\Desktop\POO_PROYECTO-2\Juego
 -- The C compiler identification is GNU 7.3.0
 -- The CXX compiler identification is GNU 7.3.0
 -- Detecting C compiler ABI info
@@ -14,4 +14,4 @@
 -- Found SFML 2.5.1 in C:/mingw32/lib/cmake/SFML
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug
+-- Build files have been written to: C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug
