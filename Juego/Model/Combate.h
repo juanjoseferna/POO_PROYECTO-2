@@ -17,11 +17,10 @@ private:
     int turno, turnoEnemigo;
     Texture fondoPelea;
     Enemigo enemigo;
-    int x1Huir = 47, x2Huir = 579, y1Huir = 47, y2Huir = 581;
-    int x1Rojo = 649, x2Rojo = 929, y1Rojo = 651, y2Rojo = 933;
-    int x1Verde = 653, x2Verde = 923, y1Verde = 655, y2Verde = 923;
-    int x1Naranja = 971, x2Naranja = 1235, y1Naranja = 969, y2Naranja = 1239;
-    int x1Azul = 975, x2Azul = 1243, y1Azul = 973, y2Azul = 1241;
+    int x1Rosa = 640, x2Rosa = 940, y1Rosa = 622, y2Rosa = 700;
+    int x1Verde = 640, x2Verde = 940, y1Verde = 710, y2Verde = 788;
+    int x1Naranja = 955, x2Naranja = 1256, y1Naranja = 622, y2Naranja = 700;
+    int x1Azul = 955, x2Azul = 1256, y1Azul = 710, y2Azul = 788;
     Sprite sprite;
 public:
     Combate();

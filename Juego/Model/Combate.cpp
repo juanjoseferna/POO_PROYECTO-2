@@ -13,17 +13,21 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
     bool salida = false;
     sprite.setTexture(fondoPelea);
     while(!salida){
-        if (!enemigo.getVida())
+        if (!enemigo.getVida()){
+            std::cout << "Ganaste" << std::endl;
             salida = true;
-        if (!jugador->getVida())
+        }
+        if (!jugador->getVida()){
+            std::cout << "Ganaste" << std::endl;
             salida = true;
+        }
         Event evento{};
         ventana->clear();
         ventana->draw(sprite);
-        if(Mouse::getPosition(*ventana).x >= x1Huir &&
-           Mouse::getPosition(*ventana).x <= x2Huir &&
-           Mouse::getPosition(*ventana).y >= y1Huir &&
-           Mouse::getPosition(*ventana).y <= y2Huir &&
+        if(Mouse::getPosition(*ventana).x >= x1Rosa &&
+           Mouse::getPosition(*ventana).x <= x2Rosa &&
+           Mouse::getPosition(*ventana).y >= y1Rosa &&
+           Mouse::getPosition(*ventana).y <= y2Rosa &&
            sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)){
@@ -31,35 +35,38 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 jugador->perderVida(enemigo.getDamage());
                 std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
                 std::cout << "Puntos vida enemigo: " << enemigo.getVida() << std::endl;
+                std::cout << "Boton Rosado" << std::endl;
             }
-        }
-        else if(Mouse::getPosition(*ventana).x >= x1Rojo &&
-           Mouse::getPosition(*ventana).x <= x2Rojo &&
-           Mouse::getPosition(*ventana).y >= y1Rojo &&
-           Mouse::getPosition(*ventana).y <= y2Rojo &&
-           sprite.getTexture() == &fondoPelea &&
-           Mouse::isButtonPressed(Mouse::Left)){
         }
         else if(Mouse::getPosition(*ventana).x >= x1Verde &&
                 Mouse::getPosition(*ventana).x <= x2Verde &&
                 Mouse::getPosition(*ventana).y >= y1Verde &&
                 Mouse::getPosition(*ventana).y <= y2Verde &&
-                sprite.getTexture() == &fondoPelea &&
-                Mouse::isButtonPressed(Mouse::Left)){
+                sprite.getTexture() == &fondoPelea){
+            sleep(milliseconds(100));
+            if(Mouse::isButtonPressed(Mouse::Left)) {
+                std::cout << "Boton Verde" << std::endl;
+            }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Naranja &&
                 Mouse::getPosition(*ventana).x <= x2Naranja &&
                 Mouse::getPosition(*ventana).y >= y1Naranja &&
                 Mouse::getPosition(*ventana).y <= y2Naranja &&
-                sprite.getTexture() == &fondoPelea &&
-                 Mouse::isButtonPressed(Mouse::Left)){
+                sprite.getTexture() == &fondoPelea){
+            sleep(milliseconds(100));
+                if(Mouse::isButtonPressed(Mouse::Left)) {
+                    std::cout << "Boton Naranja" << std::endl;
+                }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Azul &&
                 Mouse::getPosition(*ventana).x <= x2Azul &&
                 Mouse::getPosition(*ventana).y >= y1Azul &&
                 Mouse::getPosition(*ventana).y <= y2Azul &&
-                sprite.getTexture() == &fondoPelea &&
-                Mouse::isButtonPressed(Mouse::Left)){
+                sprite.getTexture() == &fondoPelea){
+            sleep(milliseconds(100));
+            if(Mouse::isButtonPressed(Mouse::Left)) {
+                std::cout << "Boton Azul" << std::endl;
+            }
         }
         while (ventana->pollEvent(evento)) {
             if (evento.type == Event::Closed)
