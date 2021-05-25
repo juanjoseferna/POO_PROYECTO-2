@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\finch\Desktop\POO_PROYECTO-2\Juego
+CMAKE_SOURCE_DIR = C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\finch\Desktop\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,6 +168,60 @@ Controller/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.s
 .PHONY : Controller/Controller.cpp.s
 
+Model/Combate.obj: Model/Combate.cpp.obj
+
+.PHONY : Model/Combate.obj
+
+# target to build an object file
+Model/Combate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.obj
+.PHONY : Model/Combate.cpp.obj
+
+Model/Combate.i: Model/Combate.cpp.i
+
+.PHONY : Model/Combate.i
+
+# target to preprocess a source file
+Model/Combate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.i
+.PHONY : Model/Combate.cpp.i
+
+Model/Combate.s: Model/Combate.cpp.s
+
+.PHONY : Model/Combate.s
+
+# target to generate assembly for a file
+Model/Combate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.s
+.PHONY : Model/Combate.cpp.s
+
+Model/Enemigo.obj: Model/Enemigo.cpp.obj
+
+.PHONY : Model/Enemigo.obj
+
+# target to build an object file
+Model/Enemigo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.obj
+.PHONY : Model/Enemigo.cpp.obj
+
+Model/Enemigo.i: Model/Enemigo.cpp.i
+
+.PHONY : Model/Enemigo.i
+
+# target to preprocess a source file
+Model/Enemigo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.i
+.PHONY : Model/Enemigo.cpp.i
+
+Model/Enemigo.s: Model/Enemigo.cpp.s
+
+.PHONY : Model/Enemigo.s
+
+# target to generate assembly for a file
+Model/Enemigo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.s
+.PHONY : Model/Enemigo.cpp.s
+
 Model/Jugador.obj: Model/Jugador.cpp.obj
 
 .PHONY : Model/Jugador.obj
@@ -194,6 +248,87 @@ Model/Jugador.s: Model/Jugador.cpp.s
 Model/Jugador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.s
 .PHONY : Model/Jugador.cpp.s
+
+Model/Mapa.obj: Model/Mapa.cpp.obj
+
+.PHONY : Model/Mapa.obj
+
+# target to build an object file
+Model/Mapa.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj
+.PHONY : Model/Mapa.cpp.obj
+
+Model/Mapa.i: Model/Mapa.cpp.i
+
+.PHONY : Model/Mapa.i
+
+# target to preprocess a source file
+Model/Mapa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.i
+.PHONY : Model/Mapa.cpp.i
+
+Model/Mapa.s: Model/Mapa.cpp.s
+
+.PHONY : Model/Mapa.s
+
+# target to generate assembly for a file
+Model/Mapa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.s
+.PHONY : Model/Mapa.cpp.s
+
+Model/Personaje.obj: Model/Personaje.cpp.obj
+
+.PHONY : Model/Personaje.obj
+
+# target to build an object file
+Model/Personaje.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj
+.PHONY : Model/Personaje.cpp.obj
+
+Model/Personaje.i: Model/Personaje.cpp.i
+
+.PHONY : Model/Personaje.i
+
+# target to preprocess a source file
+Model/Personaje.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.i
+.PHONY : Model/Personaje.cpp.i
+
+Model/Personaje.s: Model/Personaje.cpp.s
+
+.PHONY : Model/Personaje.s
+
+# target to generate assembly for a file
+Model/Personaje.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.s
+.PHONY : Model/Personaje.cpp.s
+
+Model/Tile.obj: Model/Tile.cpp.obj
+
+.PHONY : Model/Tile.obj
+
+# target to build an object file
+Model/Tile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Tile.cpp.obj
+.PHONY : Model/Tile.cpp.obj
+
+Model/Tile.i: Model/Tile.cpp.i
+
+.PHONY : Model/Tile.i
+
+# target to preprocess a source file
+Model/Tile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Tile.cpp.i
+.PHONY : Model/Tile.cpp.i
+
+Model/Tile.s: Model/Tile.cpp.s
+
+.PHONY : Model/Tile.s
+
+# target to generate assembly for a file
+Model/Tile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Tile.cpp.s
+.PHONY : Model/Tile.cpp.s
 
 Model/Ventana.obj: Model/Ventana.cpp.obj
 
@@ -288,9 +423,24 @@ help:
 	@echo ... Controller/Controller.obj
 	@echo ... Controller/Controller.i
 	@echo ... Controller/Controller.s
+	@echo ... Model/Combate.obj
+	@echo ... Model/Combate.i
+	@echo ... Model/Combate.s
+	@echo ... Model/Enemigo.obj
+	@echo ... Model/Enemigo.i
+	@echo ... Model/Enemigo.s
 	@echo ... Model/Jugador.obj
 	@echo ... Model/Jugador.i
 	@echo ... Model/Jugador.s
+	@echo ... Model/Mapa.obj
+	@echo ... Model/Mapa.i
+	@echo ... Model/Mapa.s
+	@echo ... Model/Personaje.obj
+	@echo ... Model/Personaje.i
+	@echo ... Model/Personaje.s
+	@echo ... Model/Tile.obj
+	@echo ... Model/Tile.i
+	@echo ... Model/Tile.s
 	@echo ... Model/Ventana.obj
 	@echo ... Model/Ventana.i
 	@echo ... Model/Ventana.s

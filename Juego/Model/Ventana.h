@@ -7,6 +7,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Jugador.h"
+#include "Combate.h"
 
 using namespace sf;
 
@@ -20,18 +22,17 @@ private:
     int y1Normal = 473, y2Normal = 540; // variables que representan los puntos y del boton infernal.
     int y1Volver = 570, y2Volver = 639; // variables que representan los puntos y del boton regresar.
     float cordX, cordY;
-    int a = 0, b = 0, c = 48, d = 48;
     bool salida{};
     Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver, pj;
     Image icono;
-    Clock reloj;
     Sprite sprite, nave;
-    IntRect rectSource;
+    Jugador jugador;
+    Combate combate;
 public:
     Ventana();
     void crearVentana();
     void menuDificultad();
-    void moverse();
+    RenderWindow * getVentana();
 };
 
 
