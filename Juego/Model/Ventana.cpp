@@ -9,8 +9,10 @@ const int Ventana::alto = 804;
 Ventana::Ventana() {
 };
 
+
 void Ventana::menuDificultad() {
     while (!salida){
+        Event evento{};
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
             ventana.close();
         }
@@ -28,9 +30,10 @@ void Ventana::menuDificultad() {
             ventana.draw(sprite);
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left)){
-                //ventana.clear();
-                //mapa.mostrarMapa(&ventana);
-                //jugador.mostrarJugador(&ventana);
+                jugador.crearJugador();
+                mapa.mostrarMapa(&ventana,&jugador);
+                ventana.setView(ventana.getDefaultView());
+
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
@@ -40,13 +43,12 @@ void Ventana::menuDificultad() {
                     sprite.getTexture() == &dificultadNormal ||
                     sprite.getTexture() == &dificultadFacil ||
                     sprite.getTexture() == &dificultadVolver)){
-            sprite.setTexture(dificultadNormal);
-            ventana.draw(sprite);
-            sleep(milliseconds(100));
-            if (Mouse::isButtonPressed(Mouse::Left)) {
-                ventana.clear();
-                combate.mostrarCombate(&ventana, &jugador);
-            }
+                sprite.setTexture(dificultadNormal);
+                ventana.draw(sprite);
+                sleep(milliseconds(100));
+                if (Mouse::isButtonPressed(Mouse::Left)) {
+                    combate.mostrarCombate(&ventana, &jugador);
+                }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
                    Mouse::getPosition(ventana).y >= y1Volver &&
@@ -65,6 +67,10 @@ void Ventana::menuDificultad() {
             sprite.setTexture(dificultad);
             ventana.draw(sprite);
             }
+        while (ventana.pollEvent(evento)) {
+            if (evento.type == Event::Closed)
+                ventana.close();
+        }
         ventana.display();
     }
 }
@@ -79,14 +85,24 @@ void Ventana::crearVentana() {
     dificultadNormal.loadFromFile("../Img/opcionInfernal.png");
     dificultadFacil.loadFromFile("../Img/opcionPesadilla.png");
     dificultadVolver.loadFromFile("../Img/opcionRegresar.png");
+    musica.loadFromFile("../Sounds/cave.wav");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
+    sonido.setBuffer(musica);
+    //sonido.play();
     while (ventana.isOpen()){
+        //if (reloj.getElapsedTime().asSeconds() == 120){
+            //sonido.stop();
+            //sonido.resetBuffer();
+            //sonido.play();
+            //reloj.restart();
+        //}
         salida = false;
         sprite.setTexture(menu);
         Event evento{};
         ventana.clear();
         ventana.draw(sprite);
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
+            sonido.stop();
             ventana.close();
         }
         if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -101,6 +117,7 @@ void Ventana::crearVentana() {
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left) &&
                 sprite.getTexture() == &menuSalida){
+                sonido.stop();
                 ventana.close();
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -122,9 +139,9 @@ void Ventana::crearVentana() {
             if (evento.type == Event::Closed)
                 ventana.close();
         }
-        ventana.draw(nave);
         ventana.display();
     }
+    sonido.stop();
 }
 
 RenderWindow *Ventana::getVentana() {

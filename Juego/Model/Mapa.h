@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Tile.h"
 #include <vector>
+#include "Jugador.h"
 
 class Mapa{
 private:
