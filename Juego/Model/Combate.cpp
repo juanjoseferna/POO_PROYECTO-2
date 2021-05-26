@@ -4,8 +4,6 @@
 
 #include "Combate.h"
 Combate::Combate() {
-    this->turno = 0;
-    this->turnoEnemigo = 0;
 }
 
 void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
@@ -31,7 +29,7 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
            sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)){
-                enemigo.perderVida(jugador->getDamage());
+                enemigo.perderVida(jugador->getDamage() + 30);
                 jugador->perderVida(enemigo.getDamage());
                 std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
                 std::cout << "Puntos vida enemigo: " << enemigo.getVida() << std::endl;
@@ -45,6 +43,10 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
+                enemigo.perderVida(jugador->getDamage() + 10);
+                jugador->perderVida(enemigo.getDamage());
+                std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
+                std::cout << "Puntos vida enemigo: " << enemigo.getVida() << std::endl;
                 std::cout << "Boton Verde" << std::endl;
             }
         }
@@ -55,7 +57,12 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
                 if(Mouse::isButtonPressed(Mouse::Left)) {
+                    enemigo.perderVida(jugador->getDamage() + 15);
+                    jugador->perderVida(enemigo.getDamage());
+                    std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
+                    std::cout << "Puntos vida enemigo: " << enemigo.getVida() << std::endl;
                     std::cout << "Boton Naranja" << std::endl;
+
                 }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Azul &&
@@ -65,7 +72,15 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
-                std::cout << "Boton Azul" << std::endl;
+                std::cout << "Boton Azul" << std::endl; //Boton de Huida
+                srand(time(nullptr));
+                posibilidadHuir = 1+rand()%101;// posibilidades de 1 a 100
+                if(posibilidadHuir<=25){
+                    salida= true;
+                }
+                else{
+                    salida = false;
+                }
             }
         }
         while (ventana->pollEvent(evento)) {

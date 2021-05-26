@@ -9,14 +9,16 @@
 #include "Enemigo.h"
 #include <iostream>
 #include "Jugador.h"
+#include <cstdlib>
+#include <ctime>
 
 using namespace sf;
 
 class Combate {
 private:
-    int turno, turnoEnemigo;
     Texture fondoPelea;
     Enemigo enemigo;
+    int posibilidadHuir;
     int x1Rosa = 640, x2Rosa = 940, y1Rosa = 622, y2Rosa = 700;
     int x1Verde = 640, x2Verde = 940, y1Verde = 710, y2Verde = 788;
     int x1Naranja = 955, x2Naranja = 1256, y1Naranja = 622, y2Naranja = 700;
@@ -25,7 +27,6 @@ private:
 public:
     Combate();
     void mostrarCombate(RenderWindow * ventana, Jugador * jugador);
-    void retirarse();
 };
 
 
