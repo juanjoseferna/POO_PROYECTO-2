@@ -9,6 +9,9 @@
 #include <iostream>
 #include "Jugador.h"
 #include "Combate.h"
+#include "Mapa.h"
+#include "Tile.h"
+
 
 using namespace sf;
 
@@ -28,11 +31,13 @@ private:
     Sprite sprite, nave;
     Jugador jugador;
     Combate combate;
+    Mapa mapa;
 public:
     Ventana();
     void crearVentana();
     void menuDificultad();
     RenderWindow * getVentana();
+
 };
 
 

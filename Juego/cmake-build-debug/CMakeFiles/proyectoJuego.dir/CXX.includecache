@@ -6,33 +6,37 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.cpp
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.cpp
 Combate.h
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.h
 
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.h
 SFML/Graphics.hpp
 -
 Enemigo.h
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Enemigo.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Enemigo.h
 iostream
 -
 Jugador.h
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.h
+cstdlib
+-
+ctime
+-
 
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Enemigo.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Enemigo.h
 Personaje.h
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h
 
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.h
 SFML/Graphics.hpp
 -
 Personaje.h
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h
 iostream
 -
 
-C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.h
+C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h
 
 C:/mingw32/include/SFML/Config.hpp
 TargetConditionals.h

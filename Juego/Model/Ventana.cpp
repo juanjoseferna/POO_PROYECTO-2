@@ -28,8 +28,9 @@ void Ventana::menuDificultad() {
             ventana.draw(sprite);
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left)){
-                ventana.clear();
-                jugador.mostrarJugador(&ventana);
+                //ventana.clear();
+                //mapa.mostrarMapa(&ventana);
+                //jugador.mostrarJugador(&ventana);
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
@@ -129,4 +130,7 @@ void Ventana::crearVentana() {
 RenderWindow *Ventana::getVentana() {
     return &ventana;
 }
+
+
+
 

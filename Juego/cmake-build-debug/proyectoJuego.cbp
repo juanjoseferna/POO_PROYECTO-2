@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\mingw32\;CMake Files\..\..\..\..\..\mingw32\lib\;CMake Files\..\..\..\..\..\mingw32\lib\cmake\;CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="proyectoJuego">
-				<Option output="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug"/>
+				<Option output="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="proyectoJuego/fast">
-				<Option output="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug"/>
+				<Option output="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/proyectoJuego.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,99 +65,99 @@
 					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego/fast"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyectoJuego/fast"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Controller/Controller.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Controller/Controller.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Controller/Controller.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Controller/Controller.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Enemigo.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Enemigo.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Enemigo.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Enemigo.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Mapa.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Mapa.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Mapa.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Mapa.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Tile.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Tile.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Tile.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Tile.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Ventana.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Ventana.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/View/View.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.h">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/View/View.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/main.cpp">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/main.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/CMakeLists.txt">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfig.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfigDependencies.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfigVersion.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-debug.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-debug.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets.cmake">
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/../../../../../mingw32/lib/cmake/SFML/SFMLSharedTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\mingw32\lib\cmake\SFML\"/>
 		</Unit>
 	</Project>
