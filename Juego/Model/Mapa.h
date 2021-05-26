@@ -27,7 +27,7 @@ public:
     virtual ~Mapa();
     std::vector<std::vector<Tile*> > tiles;
     int sizeMapa;
-    void colisiones(Jugador * jugador, const Sprite& objeto);
+    void colisiones(Jugador * jugador, Sprite& objeto);
     void mostrarMapa(RenderWindow *ventana, Jugador * jugador);
     void dibujarCofre(RenderWindow *ventana);
 

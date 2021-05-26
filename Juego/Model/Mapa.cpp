@@ -38,26 +38,46 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador){
 
 void Mapa::dibujarCofre(RenderWindow *ventana) {
     Texture cofreTexture;
-    cofreTexture.loadFromFile("../Img/cofreCerrado2.png");
+    cofreTexture.loadFromFile("../Img/cofreCerrado.png");
     cofre.setTexture(cofreTexture);
-    cofre.setPosition(ancho/2,alto/2);
+    cofre.setPosition(ancho-100 , 100);
     ventana->draw(cofre);
 }
 
-void Mapa::colisiones(Jugador *jugador, const Sprite& objeto) {
+void Mapa::colisiones(Jugador *jugador, Sprite& objeto) {
     FloatRect colisionObjeto = objeto.getGlobalBounds();
-    if (jugador->getColision().intersects(colisionObjeto) &&
-        jugador->cordY > cofre.getPosition().x){
-        jugador->cordY +=jugador->velocidad;
-    } else if (jugador->getColision().intersects(colisionObjeto) &&
-               jugador->cordY < cofre.getPosition().x){
-        jugador->cordY -=jugador->velocidad;
-    }
-    if (jugador->getColision().intersects(colisionObjeto) &&
-        jugador->cordX > cofre.getPosition().y){
-        jugador->cordX +=jugador->velocidad;
-    } else if (jugador->getColision().intersects(colisionObjeto) &&
-               jugador->cordX < cofre.getPosition().y){
-        jugador->cordX -=jugador->velocidad;
+    //Derecha del objeto
+    if (jugador->getColision().intersects(colisionObjeto)) {
+        //Abajo
+        if (jugador->getColision().top < colisionObjeto.top
+            && jugador->getColision().top + jugador->getColision().height < colisionObjeto.top + colisionObjeto.height
+            && jugador->getColision().left < colisionObjeto.left + colisionObjeto.width
+            && jugador->getColision().left + jugador->getColision().width > colisionObjeto.left) {
+            jugador->cordY = (jugador->getColision().left);
+            jugador->cordX = (colisionObjeto.top - jugador->getColision().height);
+        }//Arriba
+        else if (jugador->getColision().top > colisionObjeto.top
+                 &&
+                 jugador->getColision().top + jugador->getColision().height > colisionObjeto.top + colisionObjeto.height
+                 && jugador->getColision().left < colisionObjeto.left + colisionObjeto.width
+                 && jugador->getColision().left + jugador->getColision().width > colisionObjeto.left) {
+            jugador->cordY = (jugador->getColision().left);
+            jugador->cordX = (colisionObjeto.top + colisionObjeto.height);
+        }//Derecha
+        if (jugador->getColision().left < colisionObjeto.left
+            && jugador->getColision().left + jugador->getColision().width < colisionObjeto.left + colisionObjeto.width
+            && jugador->getColision().top < colisionObjeto.top + colisionObjeto.height
+            && jugador->getColision().top + jugador->getColision().height > colisionObjeto.top) {
+            jugador->cordY = (colisionObjeto.left - jugador->getColision().width);
+            jugador->cordX = (jugador->getColision().top);
+        }//Izquierda
+        else if (jugador->getColision().left > colisionObjeto.left
+                 &&
+                 jugador->getColision().left + jugador->getColision().width > colisionObjeto.left + colisionObjeto.width
+                 && jugador->getColision().top < colisionObjeto.top + colisionObjeto.height
+                 && jugador->getColision().top + jugador->getColision().height > colisionObjeto.top) {
+            jugador->cordY = (colisionObjeto.left + colisionObjeto.width);
+            jugador->cordX = (jugador->getColision().top);
+        }
     }
 }

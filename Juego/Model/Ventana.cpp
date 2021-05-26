@@ -85,9 +85,9 @@ void Ventana::crearVentana() {
     dificultadNormal.loadFromFile("../Img/opcionInfernal.png");
     dificultadFacil.loadFromFile("../Img/opcionPesadilla.png");
     dificultadVolver.loadFromFile("../Img/opcionRegresar.png");
-    musica.loadFromFile("../Sounds/cave.wav");
+    //musica.loadFromFile("../Sounds/cave.wav");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
-    sonido.setBuffer(musica);
+    //sonido.setBuffer(musica);
     //sonido.play();
     while (ventana.isOpen()){
         //if (reloj.getElapsedTime().asSeconds() == 120){
@@ -102,7 +102,6 @@ void Ventana::crearVentana() {
         ventana.clear();
         ventana.draw(sprite);
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
-            sonido.stop();
             ventana.close();
         }
         if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -117,7 +116,6 @@ void Ventana::crearVentana() {
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left) &&
                 sprite.getTexture() == &menuSalida){
-                sonido.stop();
                 ventana.close();
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -141,7 +139,6 @@ void Ventana::crearVentana() {
         }
         ventana.display();
     }
-    sonido.stop();
 }
 
 RenderWindow *Ventana::getVentana() {

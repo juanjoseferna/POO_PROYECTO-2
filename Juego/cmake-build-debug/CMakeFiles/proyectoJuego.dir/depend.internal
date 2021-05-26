@@ -11,23 +11,6 @@ CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Tile.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h
- C:/mingw32/include/SFML/Audio.hpp
- C:/mingw32/include/SFML/Audio/AlResource.hpp
- C:/mingw32/include/SFML/Audio/Export.hpp
- C:/mingw32/include/SFML/Audio/InputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Listener.hpp
- C:/mingw32/include/SFML/Audio/Music.hpp
- C:/mingw32/include/SFML/Audio/OutputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Sound.hpp
- C:/mingw32/include/SFML/Audio/SoundBuffer.hpp
- C:/mingw32/include/SFML/Audio/SoundBufferRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.inl
- C:/mingw32/include/SFML/Audio/SoundFileReader.hpp
- C:/mingw32/include/SFML/Audio/SoundFileWriter.hpp
- C:/mingw32/include/SFML/Audio/SoundRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundSource.hpp
- C:/mingw32/include/SFML/Audio/SoundStream.hpp
  C:/mingw32/include/SFML/Config.hpp
  C:/mingw32/include/SFML/Graphics.hpp
  C:/mingw32/include/SFML/Graphics/BlendMode.hpp
@@ -433,23 +416,6 @@ CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Tile.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h
- C:/mingw32/include/SFML/Audio.hpp
- C:/mingw32/include/SFML/Audio/AlResource.hpp
- C:/mingw32/include/SFML/Audio/Export.hpp
- C:/mingw32/include/SFML/Audio/InputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Listener.hpp
- C:/mingw32/include/SFML/Audio/Music.hpp
- C:/mingw32/include/SFML/Audio/OutputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Sound.hpp
- C:/mingw32/include/SFML/Audio/SoundBuffer.hpp
- C:/mingw32/include/SFML/Audio/SoundBufferRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.inl
- C:/mingw32/include/SFML/Audio/SoundFileReader.hpp
- C:/mingw32/include/SFML/Audio/SoundFileWriter.hpp
- C:/mingw32/include/SFML/Audio/SoundRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundSource.hpp
- C:/mingw32/include/SFML/Audio/SoundStream.hpp
  C:/mingw32/include/SFML/Config.hpp
  C:/mingw32/include/SFML/Graphics.hpp
  C:/mingw32/include/SFML/Graphics/BlendMode.hpp
@@ -535,23 +501,6 @@ CMakeFiles/proyectoJuego.dir/View/View.cpp.obj
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.cpp
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.h
- C:/mingw32/include/SFML/Audio.hpp
- C:/mingw32/include/SFML/Audio/AlResource.hpp
- C:/mingw32/include/SFML/Audio/Export.hpp
- C:/mingw32/include/SFML/Audio/InputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Listener.hpp
- C:/mingw32/include/SFML/Audio/Music.hpp
- C:/mingw32/include/SFML/Audio/OutputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Sound.hpp
- C:/mingw32/include/SFML/Audio/SoundBuffer.hpp
- C:/mingw32/include/SFML/Audio/SoundBufferRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.inl
- C:/mingw32/include/SFML/Audio/SoundFileReader.hpp
- C:/mingw32/include/SFML/Audio/SoundFileWriter.hpp
- C:/mingw32/include/SFML/Audio/SoundRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundSource.hpp
- C:/mingw32/include/SFML/Audio/SoundStream.hpp
  C:/mingw32/include/SFML/Config.hpp
  C:/mingw32/include/SFML/Graphics.hpp
  C:/mingw32/include/SFML/Graphics/BlendMode.hpp
@@ -637,23 +586,6 @@ CMakeFiles/proyectoJuego.dir/main.cpp.obj
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.h
  C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/main.cpp
- C:/mingw32/include/SFML/Audio.hpp
- C:/mingw32/include/SFML/Audio/AlResource.hpp
- C:/mingw32/include/SFML/Audio/Export.hpp
- C:/mingw32/include/SFML/Audio/InputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Listener.hpp
- C:/mingw32/include/SFML/Audio/Music.hpp
- C:/mingw32/include/SFML/Audio/OutputSoundFile.hpp
- C:/mingw32/include/SFML/Audio/Sound.hpp
- C:/mingw32/include/SFML/Audio/SoundBuffer.hpp
- C:/mingw32/include/SFML/Audio/SoundBufferRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.hpp
- C:/mingw32/include/SFML/Audio/SoundFileFactory.inl
- C:/mingw32/include/SFML/Audio/SoundFileReader.hpp
- C:/mingw32/include/SFML/Audio/SoundFileWriter.hpp
- C:/mingw32/include/SFML/Audio/SoundRecorder.hpp
- C:/mingw32/include/SFML/Audio/SoundSource.hpp
- C:/mingw32/include/SFML/Audio/SoundStream.hpp
  C:/mingw32/include/SFML/Config.hpp
  C:/mingw32/include/SFML/Graphics.hpp
  C:/mingw32/include/SFML/Graphics/BlendMode.hpp
