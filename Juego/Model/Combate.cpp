@@ -13,12 +13,12 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
     bool salida = false;
     sprite.setTexture(fondoPelea);
     while(!salida){
-        if (!enemigo.getVida()){
+        if (enemigo.getVida() <= 0){
             std::cout << "Ganaste" << std::endl;
             salida = true;
         }
-        if (!jugador->getVida()){
-            std::cout << "Ganaste" << std::endl;
+        if (jugador->getVida() <= 0){
+            std::cout << "Perdiste" << std::endl;
             salida = true;
         }
         Event evento{};
