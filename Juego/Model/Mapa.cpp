@@ -24,6 +24,7 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador){
         texturaMapa.loadFromFile("../Img/Map002.png");
         spriteMapa.setTexture(texturaMapa);
         ventana->draw(spriteMapa);
+        crearMapa(ventana,jugador);
         jugador->mostrarJugador(ventana);
         while (ventana->pollEvent(evento)) {
             if (evento.type == Event::Closed)
@@ -32,7 +33,6 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador){
         dibujarCofre(ventana);
         colisiones(jugador, cofre);
         ventana->display();
-
     }
 }
 
@@ -80,4 +80,36 @@ void Mapa::colisiones(Jugador *jugador, Sprite& objeto) {
             jugador->cordX = (jugador->getColision().top);
         }
     }
+}
+
+void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
+    texturaMuro.loadFromFile("../Img/suelo.png");
+    spriteMuro.setTexture(texturaMuro);
+    int sumadorHaciaAbajo = 0;
+    int sumadorHaciaArriba = 904;
+    //primera columna
+    for(int i = 0; i < 13; i++){
+        spriteMuro.setPosition(300,sumadorHaciaAbajo);
+        ventana->draw(spriteMuro);
+        colisiones(jugador,spriteMuro);
+        sumadorHaciaAbajo += 53;
+    }
+
+    //segunda columna
+    for(int i = 0; i < 13; i++){
+        spriteMuro.setPosition(700, sumadorHaciaArriba);
+        ventana->draw(spriteMuro);
+        colisiones(jugador,spriteMuro);
+        sumadorHaciaArriba -= 53;
+    }
+
+    sumadorHaciaAbajo = 0;
+    //terceraColumna
+    for(int i = 0; i < 13; i++){
+        spriteMuro.setPosition(1100, sumadorHaciaAbajo);
+        ventana->draw(spriteMuro);
+        colisiones(jugador,spriteMuro);
+        sumadorHaciaAbajo += 53;
+    }
+
 }

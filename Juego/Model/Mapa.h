@@ -18,6 +18,8 @@ private:
     FloatRect colisionCofre;
     Vector2i posicionSalida;
     Vector2i posicionJugador;
+    Texture texturaMuro;
+    Sprite spriteMuro;
     std::vector<Vector2i> posicionEnemigos;
     void configurarTiles();
     void configurarPosicionEnemigos();
@@ -30,6 +32,7 @@ public:
     void colisiones(Jugador * jugador, Sprite& objeto);
     void mostrarMapa(RenderWindow *ventana, Jugador * jugador);
     void dibujarCofre(RenderWindow *ventana);
+    void crearMapa(RenderWindow *ventana, Jugador * jugador);
 
 };
 
