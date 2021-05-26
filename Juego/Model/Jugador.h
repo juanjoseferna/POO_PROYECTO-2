@@ -14,19 +14,20 @@ using namespace sf;
 class Jugador : public Personaje{
 private:
     Texture Herz;
-    Sprite spriteHerz, herz2;
     View camara;
     int fotogram = 0, direccion = 0, sizeA = 48, sizeB = 48;
     int ataqueEspecial;
-    float velocidad;
-    float cordX, cordY;
     Clock reloj;
 public:
+    Sprite spriteHerz;
+    float cordX, cordY;
+    float velocidad;
     Jugador();
     void crearJugador();
     void mostrarJugador(RenderWindow * ventana);
     void moverse();
     int getAtaqueEspecial();
+    FloatRect getColision();
 };
 
 

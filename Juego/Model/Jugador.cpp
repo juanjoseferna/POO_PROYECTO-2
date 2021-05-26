@@ -3,8 +3,8 @@
 //
 
 #include "Jugador.h"
-const int ancho = 1280;
-const int alto = 804;
+const int ancho = 1440;
+const int alto = 960;
 
 Jugador::Jugador() : Personaje(100,10) {
     cordX = 0;
@@ -71,6 +71,10 @@ void Jugador::moverse() {
     if (fotogram > 96)
         fotogram = 0;
     spriteHerz.setPosition(cordY, cordX);
+}
+
+FloatRect Jugador::getColision() {
+    return spriteHerz.getGlobalBounds();
 }
 
 int Jugador::getAtaqueEspecial() {

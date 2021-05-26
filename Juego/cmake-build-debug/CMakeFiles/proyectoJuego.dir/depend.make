@@ -268,6 +268,7 @@ CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Jugador.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Mapa.cpp
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Mapa.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Personaje.h
+CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Tile.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: C:/mingw32/include/SFML/Config.hpp
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: C:/mingw32/include/SFML/Graphics.hpp
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: C:/mingw32/include/SFML/Graphics/BlendMode.hpp

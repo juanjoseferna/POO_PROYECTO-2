@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Controller/Controller.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Combate.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Enemigo.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Jugador.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Mapa.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Personaje.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Tile.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Tile.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/Model/Ventana.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/View/View.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/View/View.cpp.obj"
-  "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/main.cpp" "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/main.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Controller/Controller.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Combate.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Enemigo.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Jugador.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Jugador.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Mapa.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Personaje.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Tile.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Tile.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/Model/Ventana.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/View/View.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/View/View.cpp.obj"
+  "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/main.cpp" "C:/Users/finch/Desktop/POO_PROYECTO-2/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
