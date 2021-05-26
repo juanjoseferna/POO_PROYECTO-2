@@ -6,12 +6,17 @@
 #define PROYECTOJUEGO_ENEMIGO_H
 
 #include "Personaje.h"
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
 
 class Enemigo : public Personaje{
+private:
+    Texture enemigoT;
 public:
+    Sprite spriteEnemigo;
+    void dibujarEnemigo(RenderWindow * ventana, int x, int y);
     Enemigo();
-    void perderVidaEnemigo();
-    void RealizarAtaqueEnemigo();
 
 };
 

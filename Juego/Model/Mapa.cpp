@@ -6,26 +6,25 @@
 const int ancho = 1440;
 const int alto = 960;
 
-Mapa::Mapa()
-{
-}
+Mapa::Mapa(){}
 
-
-Mapa::~Mapa(){
-}
-
-
-
+Mapa::~Mapa(){}
 
 void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador){
     Event evento{};
+    jugador->cordX = 0;
+    jugador->cordY = 0;
     while(!Keyboard::isKeyPressed(Keyboard::Escape)) {
+        if(Keyboard::isKeyPressed(Keyboard::P)){
+            return;
+        }
         ventana->clear();
         texturaMapa.loadFromFile("../Img/Map002.png");
         spriteMapa.setTexture(texturaMapa);
         ventana->draw(spriteMapa);
         crearMapa(ventana,jugador);
         jugador->mostrarJugador(ventana);
+        enemigo.dibujarEnemigo(ventana, 100, 600);
         while (ventana->pollEvent(evento)) {
             if (evento.type == Event::Closed)
                 ventana->close();
@@ -94,7 +93,6 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
         colisiones(jugador,spriteMuro);
         sumadorHaciaAbajo += 53;
     }
-
     //segunda columna
     for(int i = 0; i < 13; i++){
         spriteMuro.setPosition(700, sumadorHaciaArriba);
@@ -102,7 +100,6 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
         colisiones(jugador,spriteMuro);
         sumadorHaciaArriba -= 53;
     }
-
     sumadorHaciaAbajo = 0;
     //terceraColumna
     for(int i = 0; i < 13; i++){
@@ -111,5 +108,4 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
         colisiones(jugador,spriteMuro);
         sumadorHaciaAbajo += 53;
     }
-
 }

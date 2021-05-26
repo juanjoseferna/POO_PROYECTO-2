@@ -6,7 +6,7 @@
 Combate::Combate() {
 }
 
-void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
+void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo * enemigo) {
     fondoPelea.loadFromFile("../Img/peleaMenu2.png");
     fuente1 = new Font();
     fuente1->loadFromFile("../Fonts/Combate.ttf");
@@ -36,16 +36,15 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
     danoRealizado->setFont(*fuente1);
     danoRealizado->setString("Dano realizado: ");
     danoRealizado->setCharacterSize(12);
-    danoRealizado->setPosition(71,659);
+    danoRealizado->setPosition(60,659);
     danoRealizado->setColor(Color::Black);
     //////////
     danoRecibido = new Text();
     danoRecibido->setFont(*fuente1);
     danoRecibido->setString("Dano recibido: ");
     danoRecibido->setCharacterSize(12);
-    danoRecibido->setPosition(389,659);
+    danoRecibido->setPosition(60,715);
     danoRecibido->setColor(Color::Black);
-    //////////
     bool salida = false;
     sprite.setTexture(fondoPelea);
     while(!salida){
@@ -56,7 +55,7 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
         vidaNumero->setString(std::to_string(jugador->getVida()));
         ventana->draw(*vidaNumero);
         ventana->draw(*vidaEnemigoTxt);
-        vidaEnemigoNumero->setString(std::to_string(enemigo.getVida()));
+        vidaEnemigoNumero->setString(std::to_string(enemigo->getVida()));
         ventana->draw(*vidaEnemigoNumero);
         ventana->draw(*danoRealizado);
         ventana->draw(*danoRecibido);
@@ -67,8 +66,8 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
            sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)){
-                enemigo.perderVida(jugador->getDamage());
-                jugador->perderVida(enemigo.getDamage());
+                enemigo->perderVida(jugador->getDamage());
+                jugador->perderVida(enemigo->getDamage());
                 std::cout << "Boton Rosado" << std::endl;
             }
         }
@@ -79,10 +78,10 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
-                enemigo.perderVida(jugador->getDamage());
-                jugador->perderVida(enemigo.getDamage());
+                enemigo->perderVida(jugador->getDamage());
+                jugador->perderVida(enemigo->getDamage());
                 std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
-                std::cout << "Puntos vida enemigo: " << enemigo.getVida() << std::endl;
+                std::cout << "Puntos vida enemigo: " << enemigo->getVida() << std::endl;
                 std::cout << "Boton Verde" << std::endl;
             }
         }
@@ -93,8 +92,8 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
-                enemigo.perderVida(jugador->getAtaqueEspecial());
-                jugador->perderVida(enemigo.getDamage());
+                enemigo->perderVida(jugador->getAtaqueEspecial());
+                jugador->perderVida(enemigo->getDamage());
                 std::cout << "Boton Naranja" << std::endl;
 
             }
@@ -114,7 +113,7 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
                     salida = true;
                 }
                 else{
-                    jugador->perderVida(enemigo.getDamage());
+                    jugador->perderVida(enemigo->getDamage());
                     std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
                     salida = false;
                 }
@@ -124,7 +123,7 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador) {
             if (evento.type == Event::Closed)
                 ventana->close();
         }
-        if (enemigo.getVida() <= 0){
+        if (enemigo->getVida() <= 0){
             std::cout << "Ganaste" << std::endl;
             salida = true;
         }

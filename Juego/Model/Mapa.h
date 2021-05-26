@@ -8,11 +8,14 @@
 #include "Tile.h"
 #include <vector>
 #include "Jugador.h"
+#include "Enemigo.h"
+#include "Combate.h"
 
 using namespace sf;
 
 class Mapa{
 private:
+    Enemigo enemigo;
     Texture texturaMapa;
     Sprite spriteMapa, cofre;
     FloatRect colisionCofre;
@@ -21,9 +24,6 @@ private:
     Texture texturaMuro;
     Sprite spriteMuro;
     std::vector<Vector2i> posicionEnemigos;
-    void configurarTiles();
-    void configurarPosicionEnemigos();
-    void configurarEstadoInicial();
 public:
     Mapa();
     virtual ~Mapa();
@@ -33,6 +33,7 @@ public:
     void mostrarMapa(RenderWindow *ventana, Jugador * jugador);
     void dibujarCofre(RenderWindow *ventana);
     void crearMapa(RenderWindow *ventana, Jugador * jugador);
+    //void colisionesEnemigo(Jugador * jugador, )
 
 };
 

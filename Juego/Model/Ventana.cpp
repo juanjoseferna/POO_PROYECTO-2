@@ -47,7 +47,7 @@ void Ventana::menuDificultad() {
                 ventana.draw(sprite);
                 sleep(milliseconds(100));
                 if (Mouse::isButtonPressed(Mouse::Left)) {
-                    combate.mostrarCombate(&ventana, &jugador);
+                    combate.mostrarCombate(&ventana, &jugador,&enemigo);
                 }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
