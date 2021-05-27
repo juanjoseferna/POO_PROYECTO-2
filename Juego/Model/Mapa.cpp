@@ -10,21 +10,25 @@ Mapa::Mapa(){}
 
 Mapa::~Mapa(){}
 
-void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador){
+void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEnemigos){
     Event evento{};
     jugador->cordX = 0;
     jugador->cordY = 0;
+    Enemigo enemigo1, enemigo2;
     while(!Keyboard::isKeyPressed(Keyboard::Escape)) {
-        if(Keyboard::isKeyPressed(Keyboard::P)){
+        if (Keyboard::isKeyPressed(Keyboard::P)) {
             return;
         }
         ventana->clear();
         texturaMapa.loadFromFile("../Img/Map002.png");
         spriteMapa.setTexture(texturaMapa);
         ventana->draw(spriteMapa);
-        crearMapa(ventana,jugador);
+        crearMapa(ventana, jugador);
         jugador->mostrarJugador(ventana);
-        enemigo.dibujarEnemigo(ventana, 100, 600);
+        enemigo1.dibujarEnemigo(ventana, 100, 200);
+        colisionesEnemigo(ventana,jugador,&enemigo1);
+        enemigo2.dibujarEnemigo(ventana,100,600);
+        colisionesEnemigo(ventana,jugador,&enemigo2);
         while (ventana->pollEvent(evento)) {
             if (evento.type == Event::Closed)
                 ventana->close();
@@ -108,4 +112,18 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
         colisiones(jugador,spriteMuro);
         sumadorHaciaAbajo += 53;
     }
+}
+
+void Mapa::colisionesEnemigo(RenderWindow * ventana, Jugador *jugador, Enemigo *enemigo) {
+    if (enemigo->getVida() > 0 && jugador->getColision().intersects(enemigo->spriteEnemigo.getGlobalBounds())) {
+        ventana->setView(ventana->getDefaultView());
+        combate.mostrarCombate(ventana, jugador, enemigo);
+    } else {
+        return;
+    }
+}
+
+void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador){
+
+
 }

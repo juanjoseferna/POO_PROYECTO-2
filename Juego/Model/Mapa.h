@@ -5,6 +5,8 @@
 #ifndef PROYECTOJUEGO_MAPA_H
 #define PROYECTOJUEGO_MAPA_H
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include <list>
 #include "Tile.h"
 #include <vector>
 #include "Jugador.h"
@@ -12,12 +14,13 @@
 #include "Combate.h"
 
 using namespace sf;
+using std::vector;
 
 class Mapa{
 private:
-    Enemigo enemigo;
     Texture texturaMapa;
     Sprite spriteMapa, cofre;
+    Combate combate;
     FloatRect colisionCofre;
     Vector2i posicionSalida;
     Vector2i posicionJugador;
@@ -30,10 +33,11 @@ public:
     std::vector<std::vector<Tile*> > tiles;
     int sizeMapa;
     void colisiones(Jugador * jugador, Sprite& objeto);
-    void mostrarMapa(RenderWindow *ventana, Jugador * jugador);
+    void mostrarMapa(RenderWindow *ventana, Jugador * jugador, int cantEnemigos);
     void dibujarCofre(RenderWindow *ventana);
     void crearMapa(RenderWindow *ventana, Jugador * jugador);
-    //void colisionesEnemigo(Jugador * jugador, )
+    void colisionesEnemigo(RenderWindow * ventana,Jugador * jugador, Enemigo * enemigo);
+    void crearEnemigos(RenderWindow *ventana, Jugador *jugador);
 
 };
 

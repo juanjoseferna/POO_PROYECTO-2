@@ -26,7 +26,6 @@ private:
     int y1Facil = 375, y2Facil = 443;   // variables que representan los puntos y del boton pesadilla.
     int y1Normal = 473, y2Normal = 540; // variables que representan los puntos y del boton infernal.
     int y1Volver = 570, y2Volver = 639; // variables que representan los puntos y del boton regresar.
-    float cordX, cordY;
     bool salida{};
     Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver, pj;
     Image icono;
@@ -36,6 +35,7 @@ private:
     Combate combate;
     Mapa mapa;
 public:
+    int cantEnemigosInfernal, cantEnemegosPesadilla;
     Ventana();
     void crearVentana();
     void menuDificultad();

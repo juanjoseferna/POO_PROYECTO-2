@@ -18,6 +18,7 @@ public:
     void dibujarEnemigo(RenderWindow * ventana, int x, int y);
     Enemigo();
 
+    Enemigo(Enemigo *pEnemigo);
 };
 
 

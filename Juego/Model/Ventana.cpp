@@ -30,10 +30,10 @@ void Ventana::menuDificultad() {
             ventana.draw(sprite);
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left)){
+                cantEnemegosPesadilla = 14;
                 jugador.crearJugador();
-                mapa.mostrarMapa(&ventana,&jugador);
+                mapa.mostrarMapa(&ventana,&jugador,cantEnemegosPesadilla);
                 ventana.setView(ventana.getDefaultView());
-
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
@@ -46,8 +46,11 @@ void Ventana::menuDificultad() {
                 sprite.setTexture(dificultadNormal);
                 ventana.draw(sprite);
                 sleep(milliseconds(100));
-                if (Mouse::isButtonPressed(Mouse::Left)) {
-                    combate.mostrarCombate(&ventana, &jugador,&enemigo);
+                if (Mouse::isButtonPressed(Mouse::Left)){
+                    cantEnemigosInfernal = 16;
+                    jugador.crearJugador();
+                    mapa.mostrarMapa(&ventana,&jugador,cantEnemigosInfernal);
+                    ventana.setView(ventana.getDefaultView());
                 }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
                    Mouse::getPosition(ventana).x <= x2Global &&
@@ -144,7 +147,3 @@ void Ventana::crearVentana() {
 RenderWindow *Ventana::getVentana() {
     return &ventana;
 }
-
-
-
-

@@ -7,6 +7,8 @@ Combate::Combate() {
 }
 
 void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo * enemigo) {
+    int danoR = 0, danoRecibido2 = 0;
+    ventana->setView(ventana->getDefaultView());
     fondoPelea.loadFromFile("../Img/peleaMenu2.png");
     fuente1 = new Font();
     fuente1->loadFromFile("../Fonts/Combate.ttf");
@@ -45,6 +47,46 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
     danoRecibido->setCharacterSize(12);
     danoRecibido->setPosition(60,715);
     danoRecibido->setColor(Color::Black);
+    //////////
+    ataqueBasico = new Text();
+    ataqueBasico->setFont(*fuente1);
+    ataqueBasico->setString("Flip-Flop Trueno");
+    ataqueBasico->setCharacterSize(15);
+    ataqueBasico->setPosition(697,651);
+    ataqueBasico->setColor(Color::Black);
+    //////////
+    ataqueEspecial = new Text();
+    ataqueEspecial->setFont(*fuente1);
+    ataqueEspecial->setString("Von-Neumann");
+    ataqueEspecial->setCharacterSize(17);
+    ataqueEspecial->setPosition(1019,651);
+    ataqueEspecial->setColor(Color::Black);
+    //////////
+    huir = new Text();
+    huir->setFont(*fuente1);
+    huir->setString("Huir");
+    huir->setCharacterSize(20);
+    huir->setPosition(1070,743);
+    huir->setColor(Color::Black);
+    //////////
+    pociones = new Text();
+    pociones->setFont(*fuente1);
+    pociones->setString("Pociones");
+    pociones->setCharacterSize(20);
+    pociones->setPosition(725,743);
+    pociones->setColor(Color::Black);
+    //////////
+    danoRealizadoNumero = new Text();
+    danoRealizadoNumero->setFont(*fuente1);
+    danoRealizadoNumero->setCharacterSize(20);
+    danoRealizadoNumero->setPosition(339,659);
+    danoRealizadoNumero->setColor(Color::Black);
+    //////////
+    danoRecibidodoNumero = new Text();
+    danoRecibidodoNumero->setFont(*fuente1);
+    danoRecibidodoNumero->setCharacterSize(20);
+    danoRecibidodoNumero->setPosition(339,715);
+    danoRecibidodoNumero->setColor(Color::Black);
     bool salida = false;
     sprite.setTexture(fondoPelea);
     while(!salida){
@@ -59,6 +101,16 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
         ventana->draw(*vidaEnemigoNumero);
         ventana->draw(*danoRealizado);
         ventana->draw(*danoRecibido);
+        ventana->draw(*ataqueBasico);
+        ventana->draw(*ataqueEspecial);
+        ventana->draw(*huir);
+        ventana->draw(*pociones);
+        ////////////////
+        danoRealizadoNumero->setString(std::to_string(danoR));
+        ventana->draw(*danoRealizadoNumero);
+        danoRecibidodoNumero->setString(std::to_string(danoRecibido2));
+        ventana->draw(*danoRecibidodoNumero);
+        //////////////////
         if(Mouse::getPosition(*ventana).x >= x1Rosa &&
            Mouse::getPosition(*ventana).x <= x2Rosa &&
            Mouse::getPosition(*ventana).y >= y1Rosa &&
@@ -66,9 +118,10 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
            sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)){
+                danoR=jugador->getDamage();
+                danoRecibido2=enemigo->getDamage();
                 enemigo->perderVida(jugador->getDamage());
                 jugador->perderVida(enemigo->getDamage());
-                std::cout << "Boton Rosado" << std::endl;
             }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Verde &&
@@ -80,9 +133,6 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
             if(Mouse::isButtonPressed(Mouse::Left)) {
                 enemigo->perderVida(jugador->getDamage());
                 jugador->perderVida(enemigo->getDamage());
-                std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
-                std::cout << "Puntos vida enemigo: " << enemigo->getVida() << std::endl;
-                std::cout << "Boton Verde" << std::endl;
             }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Naranja &&
@@ -92,9 +142,10 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
+                danoR=jugador->getAtaqueEspecial();
+                danoRecibido2=enemigo->getDamage();
                 enemigo->perderVida(jugador->getAtaqueEspecial());
                 jugador->perderVida(enemigo->getDamage());
-                std::cout << "Boton Naranja" << std::endl;
 
             }
         }
@@ -105,16 +156,15 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {
-                std::cout << "Boton Azul" << std::endl; //Boton de Huida
                 srand(time(nullptr));
                 posibilidadHuir = (1+rand()%5)-1;// posibilidades de 1 a 100
-                std::cout << "Numero: " << posibilidadHuir << std::endl;
                 if(!posibilidadHuir){
+                    enemigo->perderVida(enemigo->getVida());
                     salida = true;
                 }
                 else{
+                    danoRecibido2=enemigo->getDamage();
                     jugador->perderVida(enemigo->getDamage());
-                    std::cout << "Puntos vida: " << jugador->getVida() << std::endl;
                     salida = false;
                 }
             }
