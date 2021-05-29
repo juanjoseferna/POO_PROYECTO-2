@@ -12,3 +12,13 @@ PocionesDamage::PocionesDamage() {
 void PocionesDamage::utilizarPocionDamage(Jugador *jugador){
     jugador->setDamage(jugador->getDamage() + efectoPocion);
 }
+void PocionesDamage::cargarTexturasPocionDamage(){
+    texturaPocionDamage.loadFromFile("../Img/pocionFuerza.png");
+    spritePocionD.setTexture(texturaPocionDamage);
+}
+
+void PocionesDamage::pintarItem(RenderWindow *ventana, int x, int y){
+    cargarTexturasPocionDamage();
+    spritePocionD.setPosition(x,y);
+    ventana->draw(spritePocionD);
+}

@@ -12,9 +12,13 @@
 class PocionesDamage {
 private:
     int efectoPocion;
+    sf::Texture texturaPocionDamage;
 public:
+    sf::Sprite spritePocionD;
     PocionesDamage();
     void utilizarPocionDamage(Jugador *jugador);
+    virtual void cargarTexturasPocionDamage();
+    virtual void pintarItem(RenderWindow *ventana, int x, int y);
 };
 
 

@@ -4,16 +4,18 @@
 
 #ifndef PROYECTOJUEGO_ITEM_H
 #define PROYECTOJUEGO_ITEM_H
-#include <iostream>
 #include <SFML/Graphics.hpp>
 
-
+using namespace sf;
 
 class Item {
+protected:
+    bool suelo;
 public:
-    Item();
     virtual ~Item();
+    virtual void pintarItem(RenderWindow *ventana, int x, int y) = 0;
     virtual void cargarTexturas() = 0;
+    virtual FloatRect getColision() = 0;
     virtual void reducirResistencia() = 0;
 };
 

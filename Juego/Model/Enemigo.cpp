@@ -23,3 +23,5 @@ Enemigo::Enemigo(Enemigo *pEnemigo) : Personaje(50,10){
     enemigoT.loadFromFile("../Img/enemigo.png");
     spriteEnemigo.setTexture(enemigoT);
 }
+
+

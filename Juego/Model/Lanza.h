@@ -8,6 +8,8 @@
 #include "Item.h"
 #include <SFML/Graphics.hpp>
 
+using namespace sf;
+
 class Lanza : public Item{
 protected:
     int cantidadUsos;
@@ -17,8 +19,10 @@ public:
     sf::Sprite spriteLanza;
     Lanza();
     virtual ~Lanza();
-    virtual void cargarTexturas();
-    virtual void reducirResistencia();
+    virtual void cargarTexturas() override;
+    virtual void reducirResistencia() override;
+    virtual void pintarItem(RenderWindow *ventana, int x, int y) override;
+    virtual FloatRect getColision() override;
 };
 
 

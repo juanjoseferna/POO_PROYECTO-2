@@ -155,7 +155,12 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
     }
 }
 
-void Inventario::agregarItemsInventario()
-{
 
+void Inventario::agregarItemsInventario(Item* item){
+    this->pItems.push_back(item);
 }
+
+vector<Item *> &Inventario::getListaItems() {
+    return pItems;
+}
+

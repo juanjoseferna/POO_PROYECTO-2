@@ -32,3 +32,5 @@ void Personaje::setDamage(int puntosDamage) {
     this->puntosDamage = puntosDamage;
 }
 
+
+

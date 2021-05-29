@@ -143,4 +143,22 @@ void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemig
 void Mapa::abrirInventario(RenderWindow * ventana,Jugador * jugador){
     ventana->setView(ventana->getDefaultView());
     inventario.mostrarInventario(ventana, jugador);
+    mostrarItems(ventana);
+}
+
+void Mapa::mostrarItems(RenderWindow *ventana){
+    vector<Item *> &pListaItems = inventario.getListaItems();
+    int x = 100, y = 100;
+    for( int i = inventario.getListaItems().size() -1; i > inventario.getListaItems().size(); i++){
+        if(pListaItems[i] != nullptr){
+            x += 218;
+            pListaItems[i]->pintarItem(ventana,x,y);
+        }
+    }
+}
+
+void Mapa::colisionItems(Jugador * jugador, Item * item){
+    if (jugador->getColision().intersects(item->getColision())){
+        inventario.agregarItemsInventario(item);
+    }
 }

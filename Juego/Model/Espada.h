@@ -8,17 +8,21 @@
 #include "Item.h"
 #include <SFML/Graphics.hpp>
 
+using namespace sf;
+
 class Espada : public Item{
 private:
     int cantidadUsos;
     int cantidadDano;
-    sf::Texture texturaEspada;
+    Texture texturaEspada;
 public:
-    sf::Sprite spriteEspada;
+    Sprite spriteEspada;
     Espada();
     virtual ~Espada();
-    virtual void cargarTexturas();
-    virtual void reducirResistencia();
+    void cargarTexturas() override;
+    void reducirResistencia() override;
+    void pintarItem(RenderWindow * ventana, int x, int y);
+    FloatRect getColision() override;
 };
 
 

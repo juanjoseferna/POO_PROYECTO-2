@@ -12,9 +12,14 @@
 class PocionesVida : public Pociones{
 private:
     int efectoPocion;
+    sf::Texture texturaPocionVida;
 public:
+    sf::Sprite spritePocion;
     PocionesVida();
-    void utilizarPocionVida(Jugador *jugador);
+    virtual void utilizarPocionVida(Jugador *jugador);
+    virtual void cargarTexturasPocionVida();
+    virtual void pintarItem(RenderWindow *ventana, int x, int y);
+    FloatRect getColision() override;
 };
 
 

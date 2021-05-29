@@ -12,6 +12,10 @@
 #include "Enemigo.h"
 #include "Combate.h"
 #include "Inventario.h"
+#include "Item.h"
+#include "Espada.h"
+#include "Lanza.h"
+#include "PocionesVida.h"
 
 using namespace sf;
 using std::vector;
@@ -38,6 +42,8 @@ public:
     void colisionesEnemigo(RenderWindow * ventana,Jugador * jugador, Enemigo * enemigo);
     void crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemigos);
     void abrirInventario(RenderWindow * ventana,Jugador * jugador);
+    void mostrarItems(RenderWindow * ventana);
+    void colisionItems(Jugador * jugador, Item * item);
 };
 
 #endif //PROYECTOJUEGO_MAPA_H
