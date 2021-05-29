@@ -10,7 +10,6 @@
 #include "Jugador.h"
 #include "Combate.h"
 #include "Mapa.h"
-#include "Tile.h"
 #include "Enemigo.h"
 
 

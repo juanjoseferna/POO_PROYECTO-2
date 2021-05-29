@@ -11,7 +11,7 @@ Ventana::Ventana() {
 
 
 void Ventana::menuDificultad() {
-    while (!salida){
+    while (!salida && ventana.isOpen()){
         Event evento{};
         if (Keyboard::isKeyPressed(Keyboard::Escape)){
             ventana.close();

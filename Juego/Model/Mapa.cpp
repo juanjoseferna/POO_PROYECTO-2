@@ -14,8 +14,8 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEne
     Event evento{};
     jugador->cordX = 0;
     jugador->cordY = 0;
-    Enemigo enemigo1, enemigo2;
-    while(!Keyboard::isKeyPressed(Keyboard::Escape)) {
+    while(ventana->isOpen()) {
+        int x = 100, y = 200;
         if (Keyboard::isKeyPressed(Keyboard::P)) {
             return;
         }
@@ -25,16 +25,20 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEne
         ventana->draw(spriteMapa);
         crearMapa(ventana, jugador);
         jugador->mostrarJugador(ventana);
-        enemigo1.dibujarEnemigo(ventana, 100, 200);
-        colisionesEnemigo(ventana,jugador,&enemigo1);
-        enemigo2.dibujarEnemigo(ventana,100,600);
-        colisionesEnemigo(ventana,jugador,&enemigo2);
-        while (ventana->pollEvent(evento)) {
-            if (evento.type == Event::Closed)
-                ventana->close();
-        }
         dibujarCofre(ventana);
         colisiones(jugador, cofre);
+        crearEnemigos(ventana,jugador,cantEnemigos);
+        if (Keyboard::isKeyPressed(Keyboard::Escape)) {
+            ventana->close();
+        }
+        if (Keyboard::isKeyPressed(Keyboard::E)) {
+            abrirInventario(ventana,jugador);
+        }
+        while (ventana->pollEvent(evento)) {
+            if (evento.type == Event::Closed) {
+                ventana->close();
+            }
+        }
         ventana->display();
     }
 }
@@ -49,16 +53,15 @@ void Mapa::dibujarCofre(RenderWindow *ventana) {
 
 void Mapa::colisiones(Jugador *jugador, Sprite& objeto) {
     FloatRect colisionObjeto = objeto.getGlobalBounds();
-    //Derecha del objeto
     if (jugador->getColision().intersects(colisionObjeto)) {
-        //Abajo
+        //Parte de abajo del objeto
         if (jugador->getColision().top < colisionObjeto.top
             && jugador->getColision().top + jugador->getColision().height < colisionObjeto.top + colisionObjeto.height
             && jugador->getColision().left < colisionObjeto.left + colisionObjeto.width
             && jugador->getColision().left + jugador->getColision().width > colisionObjeto.left) {
             jugador->cordY = (jugador->getColision().left);
             jugador->cordX = (colisionObjeto.top - jugador->getColision().height);
-        }//Arriba
+        }//Parte de arriba del objeto
         else if (jugador->getColision().top > colisionObjeto.top
                  &&
                  jugador->getColision().top + jugador->getColision().height > colisionObjeto.top + colisionObjeto.height
@@ -66,14 +69,14 @@ void Mapa::colisiones(Jugador *jugador, Sprite& objeto) {
                  && jugador->getColision().left + jugador->getColision().width > colisionObjeto.left) {
             jugador->cordY = (jugador->getColision().left);
             jugador->cordX = (colisionObjeto.top + colisionObjeto.height);
-        }//Derecha
+        }//Parte derecha del objeto
         if (jugador->getColision().left < colisionObjeto.left
             && jugador->getColision().left + jugador->getColision().width < colisionObjeto.left + colisionObjeto.width
             && jugador->getColision().top < colisionObjeto.top + colisionObjeto.height
             && jugador->getColision().top + jugador->getColision().height > colisionObjeto.top) {
             jugador->cordY = (colisionObjeto.left - jugador->getColision().width);
             jugador->cordX = (jugador->getColision().top);
-        }//Izquierda
+        }//Parte izquierda del objeto
         else if (jugador->getColision().left > colisionObjeto.left
                  &&
                  jugador->getColision().left + jugador->getColision().width > colisionObjeto.left + colisionObjeto.width
@@ -105,7 +108,7 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
         sumadorHaciaArriba -= 53;
     }
     sumadorHaciaAbajo = 0;
-    //terceraColumna
+    //tercera columna
     for(int i = 0; i < 13; i++){
         spriteMuro.setPosition(1100, sumadorHaciaAbajo);
         ventana->draw(spriteMuro);
@@ -123,7 +126,21 @@ void Mapa::colisionesEnemigo(RenderWindow * ventana, Jugador *jugador, Enemigo *
     }
 }
 
-void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador){
+void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemigos){
+    int x = 100, y = 200;
+    for (int canEnem = 0; canEnem < cantEnemigos; ++canEnem) {
+        enemigos.push_back(new Enemigo);
+        enemigos[canEnem].dibujarEnemigo(ventana, x, y);
+        y *= 2;
+        if (y >= alto){
+            x += 400;
+            y = 200;
+        }
+        colisionesEnemigo(ventana,jugador,&enemigos[canEnem]);
+    }
+}
 
-
+void Mapa::abrirInventario(RenderWindow * ventana,Jugador * jugador){
+    ventana->setView(ventana->getDefaultView());
+    inventario.mostrarInventario(ventana, jugador);
 }

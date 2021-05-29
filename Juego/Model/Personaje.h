@@ -7,20 +7,17 @@
 
 
 class Personaje{
-private:
-    int vida, puntosDamage;
 protected:
+    int vida, puntosDamage;
     Personaje();
     Personaje(int,int);
 
 public:
     int getVida();
-
+    void setVida(int);
+    void setDamage(int);
     void perderVida(int);
-
     int getDamage();
-
-    void realizarAtaque();
 };
 
 

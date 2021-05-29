@@ -71,9 +71,9 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
     //////////
     pociones = new Text();
     pociones->setFont(*fuente1);
-    pociones->setString("Pociones");
+    pociones->setString("Inventario");
     pociones->setCharacterSize(20);
-    pociones->setPosition(725,743);
+    pociones->setPosition(700,743);
     pociones->setColor(Color::Black);
     //////////
     danoRealizadoNumero = new Text();
@@ -89,7 +89,7 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
     danoRecibidodoNumero->setColor(Color::Black);
     bool salida = false;
     sprite.setTexture(fondoPelea);
-    while(!salida){
+    while(!salida && ventana->isOpen()){
         Event evento{};
         ventana->clear();
         ventana->draw(sprite);
@@ -174,12 +174,22 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
                 ventana->close();
         }
         if (enemigo->getVida() <= 0){
-            std::cout << "Ganaste" << std::endl;
-            salida = true;
+            ganaste.loadFromFile("../Img/victory.png");
+            sprite.setTexture(ganaste);
+            ventana->draw(sprite);
+            sleep(milliseconds(100));
+            if (Mouse::isButtonPressed(Mouse::Left)){
+                salida = true;
+            }
         }
         if (jugador->getVida() <= 0){
-            std::cout << "Perdiste" << std::endl;
-            salida = true;
+            perdiste.loadFromFile("../Img/derrota.png");
+            sprite.setTexture(perdiste);
+            ventana->draw(sprite);
+            sleep(milliseconds(100));
+            if (Mouse::isButtonPressed(Mouse::Left)){
+                ventana->close();
+            }
         }
         ventana->display();
     }

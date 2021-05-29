@@ -1,3 +1,0 @@
-C:/Users/Usuario/Desktop/POO_PROYECTO-1/Juego/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Usuario/Desktop/POO_PROYECTO-1/Juego/cmake-build-debug/CMakeFiles/proyectoJuego.dir
-C:/Users/Usuario/Desktop/POO_PROYECTO-1/Juego/cmake-build-debug/CMakeFiles/rebuild_cache.dir

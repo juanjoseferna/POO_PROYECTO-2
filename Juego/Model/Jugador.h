@@ -22,7 +22,8 @@ public:
     Sprite spriteHerz;                                      //Sprite de Herz
     float cordX, cordY;                                     //Coordenadas Y/X invertidas jaja
     float velocidad;                                        //Velocidad a la que se mueve Herz
-    Jugador();
+    Jugador();                                              //Constructor default de inventario
+    void abrirInventario();                                 //Abre el inventario
     void crearJugador();                                    //Le carga la imagen y el sprite
     void mostrarJugador(RenderWindow * ventana);            //Dibuja el jugador
     void moverse();                                         //Mueve al jugador

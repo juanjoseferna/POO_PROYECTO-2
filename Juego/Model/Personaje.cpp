@@ -24,3 +24,11 @@ int Personaje::getDamage() {
     return puntosDamage;
 }
 
+void Personaje::setVida(int vida) {
+    this->vida = vida;
+}
+
+void Personaje::setDamage(int puntosDamage) {
+    this->puntosDamage = puntosDamage;
+}
+

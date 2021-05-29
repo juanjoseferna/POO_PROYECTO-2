@@ -16,7 +16,7 @@ using namespace sf;
 
 class Combate {
 private:
-    Texture fondoPelea;
+    Texture fondoPelea, ganaste, perdiste;
     int posibilidadHuir;
     int x1Rosa = 640, x2Rosa = 940, y1Rosa = 622, y2Rosa = 700;
     int x1Verde = 640, x2Verde = 940, y1Verde = 710, y2Verde = 788;
