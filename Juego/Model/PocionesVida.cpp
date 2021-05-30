@@ -7,16 +7,16 @@ PocionesVida::PocionesVida() {
     efectoPocion = 50;
 }
 
-void PocionesVida::utilizarPocionVida(Jugador *jugador){
+void PocionesVida::usarPocion(Jugador *jugador){
     jugador->setVida(jugador->getVida() + efectoPocion);
 }
-void PocionesVida::cargarTexturasPocionVida(){
+void PocionesVida::cargarTexturas(){
     texturaPocionVida.loadFromFile("../Img/pocionVida.png");
     spritePocion.setTexture(texturaPocionVida);
 }
 
-void PocionesVida::pintarItem(RenderWindow *ventana, int x, int y){
-    cargarTexturasPocionVida();
+void PocionesVida::pintarItem(RenderWindow * ventana, int x, int y){
+    cargarTexturas();
     spritePocion.setPosition(x,y);
     ventana->draw(spritePocion);
 }

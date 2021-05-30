@@ -12,20 +12,43 @@ Lanza::Lanza() : Item(){
 Lanza::~Lanza(){}
 
 void Lanza::cargarTexturas(){
-    texturaLanza.loadFromFile("../Img/lanza.png");
-    spriteLanza.setTexture(texturaLanza);
+    texturaLanza.loadFromFile("../Img/lanzaProv.png");
 }
 
-void Lanza::reducirResistencia(){
+void Lanza::reducirResistenciaLanza(){
     this->cantidadUsos = this->cantidadUsos-1;
 }
 
 void Lanza::pintarItem(RenderWindow *ventana, int x, int y) {
+    spriteItem.setPosition(x, y);
     cargarTexturas();
-    spriteLanza.setPosition(x, y);
-    ventana->draw(spriteLanza);
+    spriteItem.setTexture(texturaLanza);
+    if (Lanza::suelo == 1){
+        ventana->draw(spriteItem);
+    } else {
+        return;
+    }
 }
 
 FloatRect Lanza::getColision(){
 
+}
+
+void Lanza::pintarItemInventario(RenderWindow *ventana, int x, int y){
+    spriteItem.setPosition(x, y);
+    cargarTexturas();
+    spriteItem.setTexture(texturaLanza);
+    if (Lanza::suelo == 0){
+        ventana->draw(spriteItem);
+    } else {
+        return;
+    }
+}
+
+void Lanza::recogerItemSuelo(){
+    suelo = 0;
+}
+
+int Lanza::getSuelo(){
+    return suelo;
 }

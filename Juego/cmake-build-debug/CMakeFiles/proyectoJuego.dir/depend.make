@@ -730,6 +730,8 @@ CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj: ../Model/Personaje.cpp
 CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj: ../Model/Personaje.h
 
 CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Item.h
+CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Jugador.h
+CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Personaje.h
 CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Pociones.cpp
 CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Pociones.h
 CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: C:/mingw32/include/SFML/Config.hpp

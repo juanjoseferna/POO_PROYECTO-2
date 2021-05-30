@@ -18,10 +18,11 @@ void Inventario::mostrarInventario(RenderWindow * ventana, Jugador * jugador){
     texturaInventario.loadFromFile("../Img/inventario.png");
     spriteInventario.setTexture(texturaInventario);
     sleep(milliseconds(100));
-    while(!Keyboard::isKeyPressed(Keyboard::E) && ventana->isOpen() && !salida) {
+    while(ventana->isOpen() && !salida) {
         ventana->clear();
         spriteInventario.setPosition(0,0);
         ventana->draw(spriteInventario);
+        mostarItemsInventario(ventana);
         botonesInventario(ventana);
         while (ventana->pollEvent(evento)){
             if (evento.type == Event::Closed)
@@ -31,18 +32,28 @@ void Inventario::mostrarInventario(RenderWindow * ventana, Jugador * jugador){
     }
 }
 
+void Inventario::mostarItemsInventario(RenderWindow * ventana) {
+    int x, y, contx = 0, conty = 0;
+    for (int i = 0; i <= pItems.size() - 1; i++) {
+        x = (botonx1 + 50 + (220 * contx));
+        y = botony1 + 45 + (180 * conty);
+        contx++;
+        if( x > botonx8 ){
+            contx = 0;
+            conty++;
+        }
+        pItems[i]->pintarItemInventario(ventana, x, y);
+    }
+}
+
 void Inventario::botonesInventario(RenderWindow * ventana) {
-    int botonx1 = 220, botonx2 = 400 ,botonx3 = 444, botonx4 = 621, botonx5 = 670, botonx6 = 840, botonx7 = 890, botonx8 = 1060;
-    int botony1 = 180, botony2 = 342, botony3 = 370, botony4 = 530, botony5 = 550, botony6 = 717;
-    int menuSalidax1 = 1226, menuSalidax2 = 1280, menuSaliday1 = 0, menuSaliday2 = 42;
     if (Mouse::getPosition(*ventana).x >= botonx1 &&
         Mouse::getPosition(*ventana).x <= botonx2 &&
         Mouse::getPosition(*ventana).y >= botony1 &&
         Mouse::getPosition(*ventana).y <= botony2){
         sleep(milliseconds(100));
-        if (Mouse::isButtonPressed(Mouse::Left)) {
+        if (Mouse::isButtonPressed(Mouse::Left)){
             std::cout << "Boton1" << std::endl;
-            ////// x1y1
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx3 &&
                Mouse::getPosition(*ventana).x <= botonx4 &&
@@ -156,8 +167,12 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
 }
 
 
-void Inventario::agregarItemsInventario(Item* item){
-    this->pItems.push_back(item);
+void Inventario::agregarItemsInventario(Item * item){
+    if(item->getSuelo() == 1) {
+        std::cout << "agregado" << std::endl;
+        item->recogerItemSuelo();
+        this->pItems.push_back(item);
+    }
 }
 
 vector<Item *> &Inventario::getListaItems() {

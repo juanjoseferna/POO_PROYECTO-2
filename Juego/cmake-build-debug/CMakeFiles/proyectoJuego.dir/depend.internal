@@ -731,6 +731,8 @@ CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj
  C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h
 CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj
  C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Item.h
+ C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Jugador.h
+ C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h
  C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Pociones.cpp
  C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Pociones.h
  C:/mingw32/include/SFML/Config.hpp

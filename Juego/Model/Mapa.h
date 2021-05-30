@@ -23,6 +23,8 @@ using std::vector;
 class Mapa{
 private:
     Inventario inventario;
+    int itemsMapa = 10;
+    vector<Item *> items;
     vector<Enemigo> enemigos;
     Texture texturaMapa;
     Sprite spriteMapa, cofre;
@@ -42,7 +44,7 @@ public:
     void colisionesEnemigo(RenderWindow * ventana,Jugador * jugador, Enemigo * enemigo);
     void crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemigos);
     void abrirInventario(RenderWindow * ventana,Jugador * jugador);
-    void mostrarItems(RenderWindow * ventana);
+    void mostrarItems(RenderWindow * ventana,Jugador * jugador);
     void colisionItems(Jugador * jugador, Item * item);
 };
 

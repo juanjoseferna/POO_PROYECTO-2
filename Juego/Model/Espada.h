@@ -7,6 +7,7 @@
 
 #include "Item.h"
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 using namespace sf;
 
@@ -15,14 +16,17 @@ private:
     int cantidadUsos;
     int cantidadDano;
     Texture texturaEspada;
+    int suelo = 1;
 public:
-    Sprite spriteEspada;
     Espada();
     virtual ~Espada();
     void cargarTexturas() override;
-    void reducirResistencia() override;
-    void pintarItem(RenderWindow * ventana, int x, int y);
+    void reducirResistenciaEspada();
+    void pintarItem(RenderWindow * ventana, int x, int y) override;
+    void recogerItemSuelo() override;
     FloatRect getColision() override;
+    int getSuelo() override;
+    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;
 };
 
 

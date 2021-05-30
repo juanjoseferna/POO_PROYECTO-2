@@ -14,15 +14,18 @@ class Lanza : public Item{
 protected:
     int cantidadUsos;
     int cantidadDano;
-    sf::Texture texturaLanza;
+    Texture texturaLanza;
+    int suelo = 1;
 public:
-    sf::Sprite spriteLanza;
     Lanza();
     virtual ~Lanza();
-    virtual void cargarTexturas() override;
-    virtual void reducirResistencia() override;
-    virtual void pintarItem(RenderWindow *ventana, int x, int y) override;
-    virtual FloatRect getColision() override;
+    void cargarTexturas() override;
+    void reducirResistenciaLanza();
+    void pintarItem(RenderWindow *ventana, int x, int y) override;
+    FloatRect getColision() override;
+    void recogerItemSuelo() override;
+    int getSuelo() override;
+    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;
 };
 
 

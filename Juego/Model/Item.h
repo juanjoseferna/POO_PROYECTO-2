@@ -9,14 +9,16 @@
 using namespace sf;
 
 class Item {
-protected:
-    bool suelo;
 public:
+    Item();
+    Sprite spriteItem;
     virtual ~Item();
     virtual void pintarItem(RenderWindow *ventana, int x, int y) = 0;
     virtual void cargarTexturas() = 0;
     virtual FloatRect getColision() = 0;
-    virtual void reducirResistencia() = 0;
+    virtual void recogerItemSuelo() = 0;
+    virtual int getSuelo() = 0;
+    virtual void pintarItemInventario(RenderWindow *ventana, int x, int y) = 0;
 };
 
 

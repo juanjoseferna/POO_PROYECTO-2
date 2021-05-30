@@ -9,16 +9,18 @@
 #include "Pociones.h"
 #include "Jugador.h"
 
-class PocionesDamage {
+class PocionesDamage : public Pociones{
 private:
     int efectoPocion;
     sf::Texture texturaPocionDamage;
 public:
     sf::Sprite spritePocionD;
     PocionesDamage();
-    void utilizarPocionDamage(Jugador *jugador);
-    virtual void cargarTexturasPocionDamage();
-    virtual void pintarItem(RenderWindow *ventana, int x, int y);
+    virtual ~PocionesDamage();
+    void usarPocion(Jugador * jugador) override;
+    void cargarTexturas() override;
+    void pintarItem(RenderWindow *ventana, int x, int y) override;
+    FloatRect getColision() override;
 };
 
 

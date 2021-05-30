@@ -9,7 +9,7 @@ Combate::Combate() {
 void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo * enemigo) {
     int danoR = 0, danoRecibido2 = 0;
     ventana->setView(ventana->getDefaultView());
-    fondoPelea.loadFromFile("../Img/peleaMenu2.png");
+    fondoPelea.loadFromFile("../Img/peleaMenu3.png");
     fuente1 = new Font();
     fuente1->loadFromFile("../Fonts/Combate.ttf");
     vidaTxt = new Text();

@@ -16,9 +16,9 @@ private:
 public:
     sf::Sprite spritePocion;
     PocionesVida();
-    virtual void utilizarPocionVida(Jugador *jugador);
-    virtual void cargarTexturasPocionVida();
-    virtual void pintarItem(RenderWindow *ventana, int x, int y);
+    void usarPocion(Jugador *jugador) override;
+    void cargarTexturas() override;
+    void pintarItem(RenderWindow *ventana, int x, int y) override;
     FloatRect getColision() override;
 };
 

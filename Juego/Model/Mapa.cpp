@@ -12,10 +12,12 @@ Mapa::~Mapa(){}
 
 void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEnemigos){
     Event evento{};
+    Inventario inventario;
+    Espada espada;
+    Lanza lanza;
     jugador->cordX = 0;
     jugador->cordY = 0;
-    while(ventana->isOpen()) {
-        int x = 100, y = 200;
+    while(ventana->isOpen()){
         if (Keyboard::isKeyPressed(Keyboard::P)) {
             return;
         }
@@ -28,6 +30,11 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEne
         dibujarCofre(ventana);
         colisiones(jugador, cofre);
         crearEnemigos(ventana,jugador,cantEnemigos);
+        espada.pintarItem(ventana, 50, 50);
+        colisionItems(jugador,&espada);
+        lanza.pintarItem(ventana, 50, 200);
+        colisionItems(jugador,&lanza);
+        mostrarItems(ventana, jugador);
         if (Keyboard::isKeyPressed(Keyboard::Escape)) {
             ventana->close();
         }
@@ -118,7 +125,8 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
 }
 
 void Mapa::colisionesEnemigo(RenderWindow * ventana, Jugador *jugador, Enemigo *enemigo) {
-    if (enemigo->getVida() > 0 && jugador->getColision().intersects(enemigo->spriteEnemigo.getGlobalBounds())) {
+    if (enemigo->getVida() > 0 && jugador->getColision().intersects(enemigo->spriteEnemigo.getGlobalBounds())){
+        std::cout << "Colision enemigo" << std::endl;
         ventana->setView(ventana->getDefaultView());
         combate.mostrarCombate(ventana, jugador, enemigo);
     } else {
@@ -128,10 +136,10 @@ void Mapa::colisionesEnemigo(RenderWindow * ventana, Jugador *jugador, Enemigo *
 
 void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemigos){
     int x = 100, y = 200;
-    for (int canEnem = 0; canEnem < cantEnemigos; ++canEnem) {
+    for (int canEnem = 0; canEnem < cantEnemigos; ++canEnem){
         enemigos.push_back(new Enemigo);
         enemigos[canEnem].dibujarEnemigo(ventana, x, y);
-        y *= 2;
+        y += 200;
         if (y >= alto){
             x += 400;
             y = 200;
@@ -143,10 +151,24 @@ void Mapa::crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemig
 void Mapa::abrirInventario(RenderWindow * ventana,Jugador * jugador){
     ventana->setView(ventana->getDefaultView());
     inventario.mostrarInventario(ventana, jugador);
-    mostrarItems(ventana);
 }
 
-void Mapa::mostrarItems(RenderWindow *ventana){
+void Mapa::mostrarItems(RenderWindow *ventana,Jugador * jugador){
+    /*
+    for (int i = 0; i < itemsMapa; i ++) {
+        Item *item;
+        Pociones *pocion;
+        items.push_back(new Espada);
+        items[i]->pintarItem(ventana, 150, 150);
+        colisionItems(jugador, items[0]);
+        //case 4:
+        //pocion = new PocionesDamage();
+        //items.push_back(pocion);
+        //items[i]->pintarItem(ventana, 50 * opcRan, 50 * opcRan);
+        //colisionItems(jugador, items[0]);
+    }*/
+
+    /*
     vector<Item *> &pListaItems = inventario.getListaItems();
     int x = 100, y = 100;
     for( int i = inventario.getListaItems().size() -1; i > inventario.getListaItems().size(); i++){
@@ -154,11 +176,11 @@ void Mapa::mostrarItems(RenderWindow *ventana){
             x += 218;
             pListaItems[i]->pintarItem(ventana,x,y);
         }
-    }
+    }*/
 }
 
 void Mapa::colisionItems(Jugador * jugador, Item * item){
-    if (jugador->getColision().intersects(item->getColision())){
+    if (jugador->getColision().intersects(item->spriteItem.getGlobalBounds()) && item->getSuelo() == 1){
         inventario.agregarItemsInventario(item);
     }
 }

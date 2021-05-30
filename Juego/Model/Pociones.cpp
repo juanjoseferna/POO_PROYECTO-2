@@ -5,3 +5,7 @@
 #include "Pociones.h"
 Pociones::Pociones() {
 }
+
+Pociones::~Pociones(){
+}
+
