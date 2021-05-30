@@ -14,11 +14,11 @@ class Enemigo : public Personaje{
 private:
     Texture enemigoT;
 public:
-    Sprite spriteEnemigo;
-    void dibujarEnemigo(RenderWindow * ventana, int x, int y);
     Enemigo();
-
     Enemigo(Enemigo *pEnemigo);
+    Enemigo(int,int); //carga texturas
+    Sprite spriteEnemigo;
+    void dibujarEnemigo(RenderWindow * ventana, int x, int y);//dibuja enemigo en la ventana
 };
 
 

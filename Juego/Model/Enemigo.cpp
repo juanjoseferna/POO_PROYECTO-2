@@ -3,7 +3,7 @@
 //
 
 #include "Enemigo.h"
-Enemigo::Enemigo() : Personaje(50,10){
+Enemigo::Enemigo() : Personaje(40,5){
     enemigoT.loadFromFile("../Img/enemigo.png");
     spriteEnemigo.setTexture(enemigoT);
 }
@@ -19,9 +19,7 @@ void Enemigo::dibujarEnemigo(RenderWindow *ventana, int x, int y) {
     }
 }
 
-Enemigo::Enemigo(Enemigo *pEnemigo) : Personaje(50,10){
+Enemigo::Enemigo(Enemigo *pEnemigo) : Personaje(40,5){
     enemigoT.loadFromFile("../Img/enemigo.png");
     spriteEnemigo.setTexture(enemigoT);
 }
-
-

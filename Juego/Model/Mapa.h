@@ -16,23 +16,29 @@
 #include "Espada.h"
 #include "Lanza.h"
 #include "PocionesVida.h"
+#include "PocionesDamage.h"
+#include "Boss.h"
 
 using namespace sf;
 using std::vector;
 
 class Mapa{
 private:
+    bool finalizado = false;
     Inventario inventario;
-    int itemsMapa = 10;
     vector<Item *> items;
     vector<Enemigo> enemigos;
-    Texture texturaMapa;
-    Sprite spriteMapa, cofre;
+    Texture texturaMapa, salidaTexture;
+    Sprite spriteMapa, cofre, salida;
     Combate combate;
     Vector2i posicionSalida;
     Vector2i posicionJugador;
     Texture texturaMuro;
     Sprite spriteMuro;
+    Espada espada;
+    Lanza lanza;
+    PocionesVida pocionVida;
+    PocionesDamage pocionDamage;
 public:
     Mapa();
     virtual ~Mapa();
@@ -44,8 +50,10 @@ public:
     void colisionesEnemigo(RenderWindow * ventana,Jugador * jugador, Enemigo * enemigo);
     void crearEnemigos(RenderWindow *ventana, Jugador *jugador, int cantEnemigos);
     void abrirInventario(RenderWindow * ventana,Jugador * jugador);
-    void mostrarItems(RenderWindow * ventana,Jugador * jugador);
+    void crearItems(RenderWindow * ventana,Jugador * jugador);
     void colisionItems(Jugador * jugador, Item * item);
+    void colisionBoss(RenderWindow * ventana, Jugador * jugador, Boss * boss);
+    void colisionSalida(RenderWindow * ventana, Jugador * jugador, Sprite * salida);
 };
 
 #endif //PROYECTOJUEGO_MAPA_H

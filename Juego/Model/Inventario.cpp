@@ -23,7 +23,7 @@ void Inventario::mostrarInventario(RenderWindow * ventana, Jugador * jugador){
         spriteInventario.setPosition(0,0);
         ventana->draw(spriteInventario);
         mostarItemsInventario(ventana);
-        botonesInventario(ventana);
+        botonesInventario(ventana, jugador);
         while (ventana->pollEvent(evento)){
             if (evento.type == Event::Closed)
                 ventana->close();
@@ -34,26 +34,42 @@ void Inventario::mostrarInventario(RenderWindow * ventana, Jugador * jugador){
 
 void Inventario::mostarItemsInventario(RenderWindow * ventana) {
     int x, y, contx = 0, conty = 0;
-    for (int i = 0; i <= pItems.size() - 1; i++) {
+    for (int i = 0; i < pItems.size(); i++) {
         x = (botonx1 + 50 + (220 * contx));
         y = botony1 + 45 + (180 * conty);
         contx++;
-        if( x > botonx8 ){
+        if( x >= botonx7 ){
             contx = 0;
             conty++;
         }
-        pItems[i]->pintarItemInventario(ventana, x, y);
+        if(pItems[i] != nullptr) {
+            pItems[i]->pintarItemInventario(ventana, x, y);
+        }
     }
 }
 
-void Inventario::botonesInventario(RenderWindow * ventana) {
+void Inventario::eliminarItem(Item * item){
+    int contx = 0;
+    for (int i = 0; i <= pItems.size() - 1; i++) {
+        contx++;
+        if(item == pItems[i]){
+            pItems.erase(pItems.begin() + i);
+        }
+    }
+}
+
+void Inventario::botonesInventario(RenderWindow * ventana, Jugador * jugador) {
     if (Mouse::getPosition(*ventana).x >= botonx1 &&
         Mouse::getPosition(*ventana).x <= botonx2 &&
         Mouse::getPosition(*ventana).y >= botony1 &&
         Mouse::getPosition(*ventana).y <= botony2){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)){
-            std::cout << "Boton1" << std::endl;
+            if(pItems[0] != nullptr){
+                pItems[0]->usarItem(jugador);
+            }
+        } else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[0]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx3 &&
                Mouse::getPosition(*ventana).x <= botonx4 &&
@@ -61,8 +77,11 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony2){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton2" << std::endl;
-            ////// x2y1
+            if(pItems[1] != nullptr){
+                pItems[1]->usarItem(jugador);
+            }
+        } else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[1]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx5 &&
               Mouse::getPosition(*ventana).x <= botonx6 &&
@@ -71,7 +90,11 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
             std::cout << "Boton3" << std::endl;
-            ////// x3y1
+            if(pItems[2] != nullptr){
+                pItems[2]->usarItem(jugador);
+            }
+        } else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[2]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx7 &&
                Mouse::getPosition(*ventana).x <= botonx8 &&
@@ -79,8 +102,11 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony2){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton4" << std::endl;
-            ////// x4y1
+            if(pItems[3] != nullptr){
+                pItems[3]->usarItem(jugador);
+            }
+        } else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[3]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx1 &&
                Mouse::getPosition(*ventana).x <= botonx2 &&
@@ -88,8 +114,11 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony4){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton5" << std::endl;
-            ////// x1y2
+            if(pItems[4] != nullptr){
+                pItems[4]->usarItem(jugador);
+            }
+        }else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[4]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx3 &&
                Mouse::getPosition(*ventana).x <= botonx4 &&
@@ -97,8 +126,11 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony4){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton6" << std::endl;
-            ////// x2y2
+            if(pItems[5] != nullptr){
+                pItems[5]->usarItem(jugador);
+            }
+        }else if (Mouse::isButtonPressed(Mouse::Right)){
+            eliminarItem(pItems[5]);
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx5 &&
                Mouse::getPosition(*ventana).x <= botonx6 &&
@@ -106,8 +138,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony4){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton7" << std::endl;
-            ////// x3y2
+            if(pItems[6] != nullptr){
+                pItems[6]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx7 &&
                Mouse::getPosition(*ventana).x <= botonx8 &&
@@ -115,8 +148,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony4){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton8" << std::endl;
-            ////// x4y2
+            if(pItems[7] != nullptr){
+                pItems[7]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx1 &&
                Mouse::getPosition(*ventana).x <= botonx2 &&
@@ -124,8 +158,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony6){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton9" << std::endl;
-            ////// x1y3
+            if(pItems[8] != nullptr){
+                pItems[8]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx3 &&
                Mouse::getPosition(*ventana).x <= botonx4 &&
@@ -133,8 +168,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony6){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton10" << std::endl;
-            ////// x2y3
+            if(pItems[9] != nullptr){
+                pItems[9]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx5 &&
                Mouse::getPosition(*ventana).x <= botonx6 &&
@@ -142,8 +178,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony6){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton11" << std::endl;
-            ////// x3y3
+            if(pItems[10] != nullptr){
+                pItems[10]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= botonx7 &&
                Mouse::getPosition(*ventana).x <= botonx8 &&
@@ -151,8 +188,9 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
                Mouse::getPosition(*ventana).y <= botony6){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton12" << std::endl;
-            ////// x4y3
+            if(pItems[11] != nullptr){
+                pItems[11]->usarItem(jugador);
+            }
         }
     } else if (Mouse::getPosition(*ventana).x >= menuSalidax1 &&
                Mouse::getPosition(*ventana).x <= menuSalidax2 &&
@@ -168,7 +206,7 @@ void Inventario::botonesInventario(RenderWindow * ventana) {
 
 
 void Inventario::agregarItemsInventario(Item * item){
-    if(item->getSuelo() == 1) {
+    if(item->getSuelo() == 1 && pItems.size() < 12) {
         std::cout << "agregado" << std::endl;
         item->recogerItemSuelo();
         this->pItems.push_back(item);

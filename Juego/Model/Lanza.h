@@ -18,14 +18,15 @@ protected:
     int suelo = 1;
 public:
     Lanza();
-    virtual ~Lanza();
-    void cargarTexturas() override;
-    void reducirResistenciaLanza();
-    void pintarItem(RenderWindow *ventana, int x, int y) override;
+    virtual ~Lanza();//destructor
+    void cargarTexturas() override;//carga la textura del arma
+    void reducirResistenciaLanza();//reducir la resistencia del arma
+    void pintarItem(RenderWindow *ventana, int x, int y) override;//pinta el item en ventana
     FloatRect getColision() override;
-    void recogerItemSuelo() override;
+    void recogerItemSuelo() override;//recoge item del suelo
     int getSuelo() override;
-    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;
+    void usarItem(Jugador *jugador) override;//usa el hacha y hace el efecto de hacha
+    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;//ubica el hacha en inventario
 };
 
 

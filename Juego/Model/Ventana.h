@@ -26,7 +26,7 @@ private:
     int y1Normal = 473, y2Normal = 540; // variables que representan los puntos y del boton infernal.
     int y1Volver = 570, y2Volver = 639; // variables que representan los puntos y del boton regresar.
     bool salida{};
-    Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver, pj;
+    Texture menu, menuSalida, menuJugar, dificultad, dificultadFacil, dificultadNormal, dificultadVolver, pj;//texturas utilizadas
     Image icono;
     Clock reloj;
     Sprite sprite;
@@ -36,8 +36,8 @@ private:
 public:
     int cantEnemigosInfernal, cantEnemegosPesadilla;
     Ventana();
-    void crearVentana();
-    void menuDificultad();
+    void crearVentana();//crea la ventana
+    void menuDificultad();//el menu donde selecciona la dificultad
     RenderWindow * getVentana();
 };
 

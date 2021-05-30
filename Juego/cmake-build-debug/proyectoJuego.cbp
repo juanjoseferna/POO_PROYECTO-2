@@ -88,6 +88,12 @@
 		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Controller/Controller.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Boss.cpp">
+			<Option target="proyectoJuego"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Boss.h">
+			<Option target="proyectoJuego"/>
+		</Unit>
 		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Combate.cpp">
 			<Option target="proyectoJuego"/>
 		</Unit>
@@ -140,12 +146,6 @@
 			<Option target="proyectoJuego"/>
 		</Unit>
 		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Personaje.h">
-			<Option target="proyectoJuego"/>
-		</Unit>
-		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Pociones.cpp">
-			<Option target="proyectoJuego"/>
-		</Unit>
-		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/Pociones.h">
 			<Option target="proyectoJuego"/>
 		</Unit>
 		<Unit filename="C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/Model/PocionesDamage.cpp">

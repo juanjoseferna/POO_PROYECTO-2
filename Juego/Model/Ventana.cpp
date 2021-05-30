@@ -17,7 +17,7 @@ void Ventana::menuDificultad() {
             ventana.close();
         }
         sprite.setTexture(dificultad);
-        ventana.draw(sprite);
+        ventana.draw(sprite);//dibuja en ventana el menu de dificultad
         if (Mouse::getPosition(ventana).x >= x1Global &&
             Mouse::getPosition(ventana).x <= x2Global &&
             Mouse::getPosition(ventana).y >= y1Facil &&
@@ -27,12 +27,12 @@ void Ventana::menuDificultad() {
              sprite.getTexture() == &dificultadFacil ||
              sprite.getTexture() == &dificultadVolver)){
             sprite.setTexture(dificultadFacil);
-            ventana.draw(sprite);
+            ventana.draw(sprite);//pre selecciona la opcion al estar el mouse encima de el
             sleep(milliseconds(100));
-            if (Mouse::isButtonPressed(Mouse::Left)){
-                cantEnemegosPesadilla = 14;
-                jugador.crearJugador();
-                mapa.mostrarMapa(&ventana,&jugador,cantEnemegosPesadilla);
+            if (Mouse::isButtonPressed(Mouse::Left)){//si el mouse se para sobre el boton de dificultad pesadilla se selecciona y si da click lo manda al mapa
+                cantEnemegosPesadilla = 14;//cantidad de enemigos en el mapa
+                jugador.crearJugador();//crea el jugador
+                mapa.mostrarMapa(&ventana,&jugador,cantEnemegosPesadilla);//muestra el mapa en ventana
                 ventana.setView(ventana.getDefaultView());
             }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -44,12 +44,12 @@ void Ventana::menuDificultad() {
                     sprite.getTexture() == &dificultadFacil ||
                     sprite.getTexture() == &dificultadVolver)){
                 sprite.setTexture(dificultadNormal);
-                ventana.draw(sprite);
+                ventana.draw(sprite);//pre selecciona la opcion al estar el mouse encima de el
                 sleep(milliseconds(100));
-                if (Mouse::isButtonPressed(Mouse::Left)){
-                    cantEnemigosInfernal = 16;
-                    jugador.crearJugador();
-                    mapa.mostrarMapa(&ventana,&jugador,cantEnemigosInfernal);
+                if (Mouse::isButtonPressed(Mouse::Left)){//si el mouse se para sobre el boton de dificultad infernal se selecciona y si da click lo manda al mapa
+                    cantEnemigosInfernal = 16;//cantidad de enemigos
+                    jugador.crearJugador();//crea el jugador
+                    mapa.mostrarMapa(&ventana,&jugador,cantEnemigosInfernal);//muestra el mapa del juego en ventana
                     ventana.setView(ventana.getDefaultView());
                 }
         } else if (Mouse::getPosition(ventana).x >= x1Global &&
@@ -60,8 +60,8 @@ void Ventana::menuDificultad() {
                     sprite.getTexture() == &dificultadNormal ||
                     sprite.getTexture() == &dificultadFacil ||
                     sprite.getTexture() == &dificultadVolver)) {
-            sprite.setTexture(dificultadVolver);
-            ventana.draw(sprite);
+            sprite.setTexture(dificultadVolver);//si el mouse se para sobre el boton volver se selecciona y si da click lo sacara al menu principal
+            ventana.draw(sprite);//pre selecciona la opcion al estar el mouse encima de el
             sleep(milliseconds(100));
             if (Mouse::isButtonPressed(Mouse::Left)) {
                 salida = true;
@@ -79,8 +79,8 @@ void Ventana::menuDificultad() {
 }
 
 void Ventana::crearVentana() {
-    ventana.create(VideoMode(ancho, alto), "LA GUERRA DE LOS FLIP FLOPS");
-    menu.loadFromFile("../Img/mainMenu.png");
+    ventana.create(VideoMode(ancho, alto), "LA GUERRA DE LOS FLIP FLOPS");//nombre de la ventana
+    menu.loadFromFile("../Img/mainMenu.png");//cargar texturas a utilizar
     menuSalida.loadFromFile("../Img/seleccionarSalir.png");
     menuJugar.loadFromFile("../Img/seleccionarIniciar.png");
     icono.loadFromFile("../Img/Icono.png");
@@ -88,24 +88,15 @@ void Ventana::crearVentana() {
     dificultadNormal.loadFromFile("../Img/opcionInfernal.png");
     dificultadFacil.loadFromFile("../Img/opcionPesadilla.png");
     dificultadVolver.loadFromFile("../Img/opcionRegresar.png");
-    //musica.loadFromFile("../Sounds/cave.wav");
     ventana.setIcon(icono.getSize().x, icono.getSize().y, icono.getPixelsPtr());
-    //sonido.setBuffer(musica);
-    //sonido.play();
     while (ventana.isOpen()){
-        //if (reloj.getElapsedTime().asSeconds() == 120){
-            //sonido.stop();
-            //sonido.resetBuffer();
-            //sonido.play();
-            //reloj.restart();
-        //}
         salida = false;
         sprite.setTexture(menu);
         Event evento{};
         ventana.clear();
-        ventana.draw(sprite);
-        if (Keyboard::isKeyPressed(Keyboard::Escape)){
-            ventana.close();
+        ventana.draw(sprite);//se dibuja en ventana la textura del menu
+        if (Keyboard::isKeyPressed(Keyboard::Escape)){//si precionas escape se saldra del juego
+            ventana.close();//cierra la ventana
         }
         if (Mouse::getPosition(ventana).x >= x1Global &&
                 Mouse::getPosition(ventana).x <= x2Global &&
@@ -113,7 +104,7 @@ void Ventana::crearVentana() {
                 Mouse::getPosition(ventana).y <= y2Salida &&
                 (sprite.getTexture() == &menu ||
                  sprite.getTexture() == &menuJugar ||
-                 sprite.getTexture() == &menuSalida)){
+                 sprite.getTexture() == &menuSalida)){//si el mouse se para sobre el boton salida se selecciona y si da click lo sacara del juego
             sprite.setTexture(menuSalida);
             ventana.draw(sprite);
             sleep(milliseconds(100));
@@ -130,9 +121,9 @@ void Ventana::crearVentana() {
                  sprite.getTexture() == &menuSalida)){
             sprite.setTexture(menuJugar);
             ventana.draw(sprite);
-            sleep(milliseconds(100));
+            sleep(milliseconds(100));//si el mouse se para sobre el boton jugar se selecciona y si da click lo mada al menu de seleccionar dificultad
             if (Mouse::isButtonPressed(Mouse::Left) &&
-                sprite.getTexture() == &menuJugar){
+                sprite.getTexture() == &menuJugar){//carga menu dificultad
                 menuDificultad();
             }
         }
@@ -144,6 +135,6 @@ void Ventana::crearVentana() {
     }
 }
 
-RenderWindow *Ventana::getVentana() {
+RenderWindow *Ventana::getVentana() {//obtener ventana
     return &ventana;
 }

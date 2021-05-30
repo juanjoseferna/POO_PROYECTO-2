@@ -8,16 +8,16 @@
 
 class Personaje{
 protected:
-    int vida, puntosDamage;
+    int vida, puntosDamage, vidaAdicional = 0, damageAdicional = 0;
     Personaje();
     Personaje(int,int);
 
 public:
-    int getVida();
-    void setVida(int);
-    void setDamage(int);
-    void perderVida(int);
-    int getDamage();
+    int getVida();// obtener vida jugador
+    void setVida(int);// enviar vida jugador
+    void setDamage(int);// enviar daño jugador
+    void perderVida(int); //recibe el daño y el jugador pierde esa vida
+    int getDamage(); // obtener daño jugador
 };
 
 

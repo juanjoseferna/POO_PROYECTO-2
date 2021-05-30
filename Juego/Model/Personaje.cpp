@@ -7,29 +7,33 @@
 Personaje::Personaje() {
     this->vida = 50;
     this->puntosDamage = 10;
+    this->vidaAdicional = 0;
+    this->damageAdicional = 0;
 }
 
 Personaje::Personaje(int vida, int puntosDamage){
     this->vida = vida;
     this->puntosDamage = puntosDamage;
+    this->vidaAdicional = 0;
+    this->damageAdicional = 0;
 }
 
 void Personaje::perderVida(int puntosDamage) {
-    vida -= puntosDamage;
+    vida -= puntosDamage; //pierde vida personaje con un ataque
 }
 int Personaje::getVida(){
-    return vida;
+    return vida + vidaAdicional; //obtiene la vida actual
 }
 int Personaje::getDamage() {
-    return puntosDamage;
+    return puntosDamage + damageAdicional; //obtiene el daño
 }
 
 void Personaje::setVida(int vida) {
-    this->vida = vida;
+    this->vidaAdicional += vida; //envia la vida actual
 }
 
 void Personaje::setDamage(int puntosDamage) {
-    this->puntosDamage = puntosDamage;
+    this->damageAdicional = puntosDamage; //envia el daño actual
 }
 
 

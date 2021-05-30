@@ -15,18 +15,19 @@ class Espada : public Item{
 private:
     int cantidadUsos;
     int cantidadDano;
-    Texture texturaEspada;
+    Texture texturaEspada;//textura de la espada
     int suelo = 1;
 public:
     Espada();
-    virtual ~Espada();
-    void cargarTexturas() override;
-    void reducirResistenciaEspada();
-    void pintarItem(RenderWindow * ventana, int x, int y) override;
-    void recogerItemSuelo() override;
-    FloatRect getColision() override;
+    virtual ~Espada();//destructor
+    void cargarTexturas() override;//carga la textura de espada
+    void reducirResistenciaEspada();//reducir resistencia del arma
+    void pintarItem(RenderWindow * ventana, int x, int y) override;//pintar item en ventana
+    void recogerItemSuelo() override;//recoger item del suelo
+    FloatRect getColision() override;//colision del personaje
     int getSuelo() override;
-    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;
+    void usarItem(Jugador * jugador) override;//utiliza el item y hace su funcion
+    void pintarItemInventario(RenderWindow *ventana, int x, int y) override;//pintar item en inventario
 };
 
 

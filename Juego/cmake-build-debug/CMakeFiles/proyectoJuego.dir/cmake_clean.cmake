@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj"
+  "CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Combate.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Enemigo.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Espada.cpp.obj"
@@ -9,7 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/proyectoJuego.dir/Model/Lanza.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.obj"
-  "CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj"
   "CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj"

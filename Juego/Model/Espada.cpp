@@ -11,17 +11,17 @@ Espada::~Espada(){
 }
 
 void Espada::cargarTexturas(){
-    this->cantidadUsos = 3;
-    this->cantidadDano = 15;
-    texturaEspada.loadFromFile("../Img/espadaProv.png");
+    this->cantidadUsos = 3;//cantidad de usos
+    this->cantidadDano = 15;//cantidad de daño implementado
+    texturaEspada.loadFromFile("../Img/espadaProv.png");//carga la textura de la espada
 
 }
 
-void Espada::reducirResistenciaEspada(){
+void Espada::reducirResistenciaEspada(){//reduce la cantidad de uso del arma
     this->cantidadUsos = this->cantidadUsos - 1;
 }
 
-void Espada::pintarItem(RenderWindow *ventana, int x, int y){
+void Espada::pintarItem(RenderWindow *ventana, int x, int y){//pinta el item espada en ventana
     spriteItem.setPosition(x, y);
     cargarTexturas();
     spriteItem.setTexture(texturaEspada);
@@ -32,7 +32,7 @@ void Espada::pintarItem(RenderWindow *ventana, int x, int y){
     }
 }
 
-void Espada::pintarItemInventario(RenderWindow *ventana, int x, int y){
+void Espada::pintarItemInventario(RenderWindow *ventana, int x, int y){//pinta el item espada en el inventario
     spriteItem.setPosition(x, y);
     cargarTexturas();
     spriteItem.setTexture(texturaEspada);
@@ -40,6 +40,15 @@ void Espada::pintarItemInventario(RenderWindow *ventana, int x, int y){
         ventana->draw(spriteItem);
     } else {
         return;
+    }
+}
+
+void Espada::usarItem(Jugador *jugador) {//usar la espada
+    if (cantidadUsos > 0) {
+        jugador->setDamage(cantidadDano);
+        cantidadUsos --;
+    } else {
+        jugador->setDamage(0);
     }
 }
 

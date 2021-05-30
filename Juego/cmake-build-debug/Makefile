@@ -168,6 +168,33 @@ Controller/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.s
 .PHONY : Controller/Controller.cpp.s
 
+Model/Boss.obj: Model/Boss.cpp.obj
+
+.PHONY : Model/Boss.obj
+
+# target to build an object file
+Model/Boss.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj
+.PHONY : Model/Boss.cpp.obj
+
+Model/Boss.i: Model/Boss.cpp.i
+
+.PHONY : Model/Boss.i
+
+# target to preprocess a source file
+Model/Boss.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.i
+.PHONY : Model/Boss.cpp.i
+
+Model/Boss.s: Model/Boss.cpp.s
+
+.PHONY : Model/Boss.s
+
+# target to generate assembly for a file
+Model/Boss.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.s
+.PHONY : Model/Boss.cpp.s
+
 Model/Combate.obj: Model/Combate.cpp.obj
 
 .PHONY : Model/Combate.obj
@@ -411,33 +438,6 @@ Model/Personaje.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Personaje.cpp.s
 .PHONY : Model/Personaje.cpp.s
 
-Model/Pociones.obj: Model/Pociones.cpp.obj
-
-.PHONY : Model/Pociones.obj
-
-# target to build an object file
-Model/Pociones.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj
-.PHONY : Model/Pociones.cpp.obj
-
-Model/Pociones.i: Model/Pociones.cpp.i
-
-.PHONY : Model/Pociones.i
-
-# target to preprocess a source file
-Model/Pociones.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.i
-.PHONY : Model/Pociones.cpp.i
-
-Model/Pociones.s: Model/Pociones.cpp.s
-
-.PHONY : Model/Pociones.s
-
-# target to generate assembly for a file
-Model/Pociones.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.s
-.PHONY : Model/Pociones.cpp.s
-
 Model/PocionesDamage.obj: Model/PocionesDamage.cpp.obj
 
 .PHONY : Model/PocionesDamage.obj
@@ -585,6 +585,9 @@ help:
 	@echo ... Controller/Controller.obj
 	@echo ... Controller/Controller.i
 	@echo ... Controller/Controller.s
+	@echo ... Model/Boss.obj
+	@echo ... Model/Boss.i
+	@echo ... Model/Boss.s
 	@echo ... Model/Combate.obj
 	@echo ... Model/Combate.i
 	@echo ... Model/Combate.s
@@ -612,9 +615,6 @@ help:
 	@echo ... Model/Personaje.obj
 	@echo ... Model/Personaje.i
 	@echo ... Model/Personaje.s
-	@echo ... Model/Pociones.obj
-	@echo ... Model/Pociones.i
-	@echo ... Model/Pociones.s
 	@echo ... Model/PocionesDamage.obj
 	@echo ... Model/PocionesDamage.i
 	@echo ... Model/PocionesDamage.s

@@ -28,8 +28,9 @@ public:
     virtual ~Inventario();
     void mostarItemsInventario(RenderWindow * ventana);
     void mostrarInventario(RenderWindow * ventana, Jugador * jugador);
-    void botonesInventario(RenderWindow * ventana);
+    void botonesInventario(RenderWindow * ventana, Jugador * jugador);
     void agregarItemsInventario(Item* item);
+    void eliminarItem(Item * item);
     vector<Item *> &getListaItems();
 };
 

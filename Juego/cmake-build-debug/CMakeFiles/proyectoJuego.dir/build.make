@@ -257,24 +257,10 @@ CMakeFiles/proyectoJuego.dir/Model/Inventario.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyectoJuego.dir/Model/Inventario.cpp.s"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Inventario.cpp -o CMakeFiles\proyectoJuego.dir\Model\Inventario.cpp.s
 
-CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: CMakeFiles/proyectoJuego.dir/flags.make
-CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: CMakeFiles/proyectoJuego.dir/includes_CXX.rsp
-CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj: ../Model/Pociones.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj"
-	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proyectoJuego.dir\Model\Pociones.cpp.obj -c C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Pociones.cpp
-
-CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.i"
-	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Pociones.cpp > CMakeFiles\proyectoJuego.dir\Model\Pociones.cpp.i
-
-CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.s"
-	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Pociones.cpp -o CMakeFiles\proyectoJuego.dir\Model\Pociones.cpp.s
-
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: CMakeFiles/proyectoJuego.dir/flags.make
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: CMakeFiles/proyectoJuego.dir/includes_CXX.rsp
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: ../Model/PocionesVida.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proyectoJuego.dir\Model\PocionesVida.cpp.obj -c C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\PocionesVida.cpp
 
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.i: cmake_force
@@ -288,7 +274,7 @@ CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.s: cmake_force
 CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj: CMakeFiles/proyectoJuego.dir/flags.make
 CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj: CMakeFiles/proyectoJuego.dir/includes_CXX.rsp
 CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj: ../Model/PocionesDamage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proyectoJuego.dir\Model\PocionesDamage.cpp.obj -c C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\PocionesDamage.cpp
 
 CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.i: cmake_force
@@ -298,6 +284,20 @@ CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.i: cmake_force
 CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.s"
 	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\PocionesDamage.cpp -o CMakeFiles\proyectoJuego.dir\Model\PocionesDamage.cpp.s
+
+CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj: CMakeFiles/proyectoJuego.dir/flags.make
+CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj: CMakeFiles/proyectoJuego.dir/includes_CXX.rsp
+CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj: ../Model/Boss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\proyectoJuego.dir\Model\Boss.cpp.obj -c C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Boss.cpp
+
+CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.i"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Boss.cpp > CMakeFiles\proyectoJuego.dir\Model\Boss.cpp.i
+
+CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.s"
+	C:\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\Model\Boss.cpp -o CMakeFiles\proyectoJuego.dir\Model\Boss.cpp.s
 
 # Object files for target proyectoJuego
 proyectoJuego_OBJECTS = \
@@ -314,9 +314,9 @@ proyectoJuego_OBJECTS = \
 "CMakeFiles/proyectoJuego.dir/Model/Espada.cpp.obj" \
 "CMakeFiles/proyectoJuego.dir/Model/Item.cpp.obj" \
 "CMakeFiles/proyectoJuego.dir/Model/Inventario.cpp.obj" \
-"CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj" \
 "CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj" \
-"CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj"
+"CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj" \
+"CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj"
 
 # External object files for target proyectoJuego
 proyectoJuego_EXTERNAL_OBJECTS =
@@ -334,9 +334,9 @@ proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Lanza.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Espada.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Item.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Inventario.cpp.obj
-proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Pociones.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/PocionesDamage.cpp.obj
+proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj
 proyectoJuego.exe: CMakeFiles/proyectoJuego.dir/build.make
 proyectoJuego.exe: C:/mingw32/lib/libsfml-graphics-d.a
 proyectoJuego.exe: C:/mingw32/lib/libsfml-audio-d.a
