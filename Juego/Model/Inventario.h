@@ -16,7 +16,7 @@ using namespace sf;
 class Inventario {
 private:
     bool salida = false;
-    Texture texturaInventario;
+    Texture texturaInventario;//textura del inventario
     vector<Item *> pItems;
     const static int CANTIDAD_MAX_ITEMS;
     int botonx1 = 220, botonx2 = 400 ,botonx3 = 444, botonx4 = 621, botonx5 = 670, botonx6 = 840, botonx7 = 890, botonx8 = 1060;
@@ -26,11 +26,11 @@ public:
     Sprite spriteInventario;
     Inventario();
     virtual ~Inventario();
-    void mostarItemsInventario(RenderWindow * ventana);
-    void mostrarInventario(RenderWindow * ventana, Jugador * jugador);
-    void botonesInventario(RenderWindow * ventana, Jugador * jugador);
-    void agregarItemsInventario(Item* item);
-    void eliminarItem(Item * item);
+    void mostarItemsInventario(RenderWindow * ventana);//mostrar los items del inventario
+    void mostrarInventario(RenderWindow * ventana, Jugador * jugador);//mostrar inventario en mapa
+    void botonesInventario(RenderWindow * ventana, Jugador * jugador);//botones del inventario
+    void agregarItemsInventario(Item* item);//agregar items a inventario
+    void eliminarItem(Item * item);//elimnar items de inventario
     vector<Item *> &getListaItems();
 };
 

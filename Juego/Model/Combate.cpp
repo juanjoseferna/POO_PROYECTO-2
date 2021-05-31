@@ -93,65 +93,65 @@ void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo 
     while(!salida && ventana->isOpen()){
         Event evento{};
         ventana->clear();
-        ventana->draw(sprite);
-        ventana->draw(*vidaTxt);
+        ventana->draw(sprite);//dibuja combate en la ventana
+        ventana->draw(*vidaTxt);//dibuja en combate la vida del personaje
         vidaNumero->setString(std::to_string(jugador->getVida()));
-        ventana->draw(*vidaNumero);
-        ventana->draw(*vidaEnemigoTxt);
+        ventana->draw(*vidaNumero);//dibuja la cantidad de vida de hertz
+        ventana->draw(*vidaEnemigoTxt);//dibuja en combate la vida del enemigo
         vidaEnemigoNumero->setString(std::to_string(enemigo->getVida()));
-        ventana->draw(*vidaEnemigoNumero);
-        ventana->draw(*danoRealizado);
-        ventana->draw(*danoRecibido);
-        ventana->draw(*ataqueBasico);
-        ventana->draw(*ataqueEspecial);
-        ventana->draw(*huir);
-        ventana->draw(*pociones);
+        ventana->draw(*vidaEnemigoNumero);//dibuja la cantidad de vida de enemigo
+        ventana->draw(*danoRealizado);//dibuja en combate el daño realizado
+        ventana->draw(*danoRecibido);//dibuja en combate el daño recibido
+        ventana->draw(*ataqueBasico);//dibuja en combate el boton
+        ventana->draw(*ataqueEspecial);//dibuja en combate el boton
+        ventana->draw(*huir);//dibuja en combate el boton
+        ventana->draw(*pociones);//dibuja en combate el boton
         ////////////////
         danoRealizadoNumero->setString(std::to_string(danoR));
-        ventana->draw(*danoRealizadoNumero);
+        ventana->draw(*danoRealizadoNumero);//dibuja en combate el daño realizado el numero
         danoRecibidodoNumero->setString(std::to_string(danoRecibido2));
-        ventana->draw(*danoRecibidodoNumero);
+        ventana->draw(*danoRecibidodoNumero);//dibuja en combate el daño recibido el numero
         //////////////////
         if(Mouse::getPosition(*ventana).x >= x1Rosa &&
            Mouse::getPosition(*ventana).x <= x2Rosa &&
-           Mouse::getPosition(*ventana).y >= y1Rosa &&
+           Mouse::getPosition(*ventana).y >= y1Rosa &&//coordenadas del boton flip flop trueno
            Mouse::getPosition(*ventana).y <= y2Rosa &&
            sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)){ //Boton rosa funcionalidades de ataque flip flop
                 danoR=jugador->getDamage();
                 danoRecibido2=enemigo->getDamage();
-                enemigo->perderVida(jugador->getDamage());
-                jugador->perderVida(enemigo->getDamage());
+                enemigo->perderVida(jugador->getDamage());//ataque a enemigo
+                jugador->perderVida(enemigo->getDamage());//ataque de enemigo
             }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Verde &&
                 Mouse::getPosition(*ventana).x <= x2Verde &&
-                Mouse::getPosition(*ventana).y >= y1Verde &&
+                Mouse::getPosition(*ventana).y >= y1Verde &&//coordenadas boton  inventario
                 Mouse::getPosition(*ventana).y <= y2Verde &&
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) { //Boton verde es para abrir el inventario
                 jugador->perderVida(enemigo->getDamage());
-                inventario->mostrarInventario(ventana,jugador);
+                inventario->mostrarInventario(ventana,jugador);//mostrar inventario
             }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Naranja &&
                 Mouse::getPosition(*ventana).x <= x2Naranja &&
-                Mouse::getPosition(*ventana).y >= y1Naranja &&
+                Mouse::getPosition(*ventana).y >= y1Naranja &&//coordenadas boton ataque von neumann
                 Mouse::getPosition(*ventana).y <= y2Naranja &&
                 sprite.getTexture() == &fondoPelea){
             sleep(milliseconds(100));
             if(Mouse::isButtonPressed(Mouse::Left)) {//Boton naranja funcionalidades de ataque von neumann
                 danoR=jugador->getAtaqueEspecial();
                 danoRecibido2=enemigo->getDamage();
-                enemigo->perderVida(jugador->getAtaqueEspecial());
-                jugador->perderVida(enemigo->getDamage());
+                enemigo->perderVida(jugador->getAtaqueEspecial());//ataque a enemigo
+                jugador->perderVida(enemigo->getDamage());// ataque a jugador de enemigo
 
             }
         }
         else if(Mouse::getPosition(*ventana).x >= x1Azul &&
-                Mouse::getPosition(*ventana).x <= x2Azul &&
+                Mouse::getPosition(*ventana).x <= x2Azul &&//coordenadas boton huir
                 Mouse::getPosition(*ventana).y >= y1Azul &&
                 Mouse::getPosition(*ventana).y <= y2Azul &&
                 sprite.getTexture() == &fondoPelea){
