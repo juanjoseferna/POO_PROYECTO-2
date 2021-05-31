@@ -33,7 +33,13 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEne
         colisiones(jugador, cofre);
         crearItems(ventana, jugador);//crear items en mapa
         crearEnemigos(ventana,jugador,cantEnemigos);//crear enemigos en mapa
-        colisionSalida(ventana,jugador, &salida);//
+        colisionSalida(ventana,jugador, &salida);
+        items.push_back(new PocionesVida);
+        items.push_back(new PocionesVida);
+        items[5]->pintarItem(ventana,700,40);
+        colisionItems(jugador,items[5]);
+        items[6]->pintarItem(ventana,1400,900);
+        colisionItems(jugador,items[6]);
         if (Keyboard::isKeyPressed(Keyboard::Escape)) {//al presionar escape saldra del juego
             ventana->close();
         }
