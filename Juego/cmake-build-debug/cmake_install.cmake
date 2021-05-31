@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego
+# Install script for directory: C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/jeanz/Desktop/REPO/POO_PROYECTO-2/Juego/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Usuario/Documents/POO_PROYECTO-2/Juego/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -66,10 +66,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego
+CMAKE_SOURCE_DIR = C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanz\Desktop\REPO\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Usuario\Documents\POO_PROYECTO-2\Juego\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -167,6 +167,33 @@ Controller/Controller.s: Controller/Controller.cpp.s
 Controller/Controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.s
 .PHONY : Controller/Controller.cpp.s
+
+Model/Artefacto.obj: Model/Artefacto.cpp.obj
+
+.PHONY : Model/Artefacto.obj
+
+# target to build an object file
+Model/Artefacto.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj
+.PHONY : Model/Artefacto.cpp.obj
+
+Model/Artefacto.i: Model/Artefacto.cpp.i
+
+.PHONY : Model/Artefacto.i
+
+# target to preprocess a source file
+Model/Artefacto.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.i
+.PHONY : Model/Artefacto.cpp.i
+
+Model/Artefacto.s: Model/Artefacto.cpp.s
+
+.PHONY : Model/Artefacto.s
+
+# target to generate assembly for a file
+Model/Artefacto.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\proyectoJuego.dir\build.make CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.s
+.PHONY : Model/Artefacto.cpp.s
 
 Model/Boss.obj: Model/Boss.cpp.obj
 
@@ -585,6 +612,9 @@ help:
 	@echo ... Controller/Controller.obj
 	@echo ... Controller/Controller.i
 	@echo ... Controller/Controller.s
+	@echo ... Model/Artefacto.obj
+	@echo ... Model/Artefacto.i
+	@echo ... Model/Artefacto.s
 	@echo ... Model/Boss.obj
 	@echo ... Model/Boss.i
 	@echo ... Model/Boss.s

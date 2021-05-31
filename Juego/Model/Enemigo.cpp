@@ -8,6 +8,9 @@ Enemigo::Enemigo() : Personaje(40,5){
     spriteEnemigo.setTexture(enemigoT);
 }
 
+Enemigo::~Enemigo(){
+}
+
 void Enemigo::dibujarEnemigo(RenderWindow *ventana, int x, int y) {
     enemigoT.loadFromFile("../Img/enemigo.png");
     spriteEnemigo.setTexture(enemigoT);

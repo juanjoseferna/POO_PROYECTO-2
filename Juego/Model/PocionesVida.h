@@ -9,14 +9,16 @@
 #include "Item.h"
 #include "Jugador.h"
 
+using namespace sf;
+
 class PocionesVida : public Item{
 private:
     int efectoPocion;
-    sf::Texture texturaPocionVida; //carga la textura
+    Texture texturaPocionVida; //carga la textura
     int suelo = 1;
 public:
-    sf::Sprite spritePocion;
     PocionesVida();
+    virtual ~PocionesVida();
     void usarPocion(Jugador *jugador); //efecto de la pocion
     void cargarTexturas() override; //carga la textura
     void pintarItem(RenderWindow *ventana, int x, int y) override; //pinta el item en ventana

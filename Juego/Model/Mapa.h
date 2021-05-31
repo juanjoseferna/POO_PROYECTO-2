@@ -18,27 +18,21 @@
 #include "PocionesVida.h"
 #include "PocionesDamage.h"
 #include "Boss.h"
+#include "Artefacto.h"
 
 using namespace sf;
 using std::vector;
 
 class Mapa{
 private:
-    bool finalizado = false;
-    Inventario inventario;
-    vector<Item *> items;
-    vector<Enemigo> enemigos;
-    Texture texturaMapa, salidaTexture;//Texturas
-    Sprite spriteMapa, cofre, salida;//sprites
+    Inventario inventario; // objeto de la clase inventario
+    vector<Item *> items;//vector utilizado para items
+    vector<Enemigo> enemigos;//vector de enemigos
+    Texture texturaMapa, salidaTexture;
+    Sprite spriteMapa, cofre, salida;
     Combate combate;
-    Vector2i posicionSalida;
-    Vector2i posicionJugador;
     Texture texturaMuro;
     Sprite spriteMuro;
-    Espada espada;
-    Lanza lanza;
-    PocionesVida pocionVida;
-    PocionesDamage pocionDamage;
 public:
     Mapa();
     virtual ~Mapa();//destructor

@@ -13,6 +13,9 @@ Jugador::Jugador() : Personaje(100,10) {
     velocidad = 5;
 }
 
+Jugador::~Jugador(){
+}
+
 void Jugador::crearJugador(){
     Herz.loadFromFile("../Img/personaje.png");
     spriteHerz.setTexture(Herz);
@@ -75,6 +78,10 @@ void Jugador::moverse() {
 
 FloatRect Jugador::getColision() {
     return spriteHerz.getGlobalBounds();
+}
+
+void Jugador::usarArtefacto() {
+    this->artefacto = !artefacto;
 }
 
 int Jugador::getAtaqueEspecial() {

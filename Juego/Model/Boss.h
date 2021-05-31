@@ -16,6 +16,7 @@ private:
 public:
     Sprite boss;
     Boss();
+    virtual ~Boss();
     void dibujarBoss(RenderWindow * ventana, int x, int y);//dibuja el boss en ventana
 };
 

@@ -4,7 +4,6 @@
 
 #include "Espada.h"
 Espada::Espada() : Item (){
-    suelo = true;
 }
 
 Espada::~Espada(){

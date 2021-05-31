@@ -3,6 +3,7 @@
 
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Controller/Controller.cpp
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Controller/Controller.h
+CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Model/Artefacto.h
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Model/Boss.h
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Model/Combate.h
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: ../Model/Enemigo.h
@@ -90,6 +91,86 @@ CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: C:/mingw32/include/S
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: C:/mingw32/include/SFML/Window/Window.hpp
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: C:/mingw32/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/proyectoJuego.dir/Controller/Controller.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
+
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: ../Model/Artefacto.cpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: ../Model/Artefacto.h
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: ../Model/Item.h
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: ../Model/Jugador.h
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: ../Model/Personaje.h
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Config.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/BlendMode.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/CircleShape.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Color.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/ConvexShape.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Drawable.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Export.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Font.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Glsl.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Glsl.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Glyph.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Image.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/PrimitiveType.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Rect.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Rect.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/RectangleShape.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/RenderStates.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/RenderTarget.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/RenderTexture.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/RenderWindow.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Shader.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Shape.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Sprite.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Text.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Texture.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Transform.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Transformable.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/Vertex.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/VertexArray.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/VertexBuffer.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Graphics/View.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Clock.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Err.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Export.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/FileInputStream.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/InputStream.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Lock.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/MemoryInputStream.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Mutex.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/NonCopyable.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Sleep.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/String.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/String.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Thread.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Thread.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/ThreadLocal.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/ThreadLocalPtr.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/ThreadLocalPtr.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Time.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Utf.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Utf.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Vector2.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Vector2.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Vector3.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/System/Vector3.inl
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Clipboard.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Context.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/ContextSettings.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Cursor.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Event.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Export.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/GlResource.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Joystick.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Keyboard.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Mouse.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Sensor.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Touch.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/VideoMode.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/Window.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/WindowHandle.hpp
+CMakeFiles/proyectoJuego.dir/Model/Artefacto.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj: ../Model/Boss.cpp
 CMakeFiles/proyectoJuego.dir/Model/Boss.cpp.obj: ../Model/Boss.h
@@ -727,6 +808,7 @@ CMakeFiles/proyectoJuego.dir/Model/Lanza.cpp.obj: C:/mingw32/include/SFML/Window
 CMakeFiles/proyectoJuego.dir/Model/Lanza.cpp.obj: C:/mingw32/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/proyectoJuego.dir/Model/Lanza.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Artefacto.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Boss.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Combate.h
 CMakeFiles/proyectoJuego.dir/Model/Mapa.cpp.obj: ../Model/Enemigo.h
@@ -978,6 +1060,7 @@ CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: C:/mingw32/include/SFML
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: C:/mingw32/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/proyectoJuego.dir/Model/PocionesVida.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
 
+CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: ../Model/Artefacto.h
 CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: ../Model/Boss.h
 CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: ../Model/Combate.h
 CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: ../Model/Enemigo.h
@@ -1068,6 +1151,7 @@ CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: C:/mingw32/include/SFML/Wind
 CMakeFiles/proyectoJuego.dir/Model/Ventana.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: ../Controller/Controller.h
+CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: ../Model/Artefacto.h
 CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: ../Model/Boss.h
 CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: ../Model/Combate.h
 CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: ../Model/Enemigo.h
@@ -1159,6 +1243,7 @@ CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: C:/mingw32/include/SFML/Window/W
 CMakeFiles/proyectoJuego.dir/View/View.cpp.obj: C:/mingw32/include/SFML/Window/WindowStyle.hpp
 
 CMakeFiles/proyectoJuego.dir/main.cpp.obj: ../Controller/Controller.h
+CMakeFiles/proyectoJuego.dir/main.cpp.obj: ../Model/Artefacto.h
 CMakeFiles/proyectoJuego.dir/main.cpp.obj: ../Model/Boss.h
 CMakeFiles/proyectoJuego.dir/main.cpp.obj: ../Model/Combate.h
 CMakeFiles/proyectoJuego.dir/main.cpp.obj: ../Model/Enemigo.h

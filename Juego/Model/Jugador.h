@@ -19,11 +19,13 @@ private:
     int ataqueEspecial;                                     //Daño del ataque especial
     Clock reloj;                                            //Reloj, usado para la animacion
 public:
+    bool artefacto = false;                                 //variable para saber si el artefacto esta
     Sprite spriteHerz;                                      //Sprite de Herz
     float cordX, cordY;                                     //Coordenadas Y/X invertidas jaja
     float velocidad;                                        //Velocidad a la que se mueve Herz
-    Jugador();                                              //Constructor default de inventario
-    void abrirInventario();                                 //Abre el inventario
+    Jugador();//Constructor default de inventario
+    virtual ~Jugador();
+    void usarArtefacto();                                   //funcion cambia el valor de artefacto
     void crearJugador();                                    //Le carga la imagen y el sprite
     void mostrarJugador(RenderWindow * ventana);            //Dibuja el jugador
     void moverse();                                         //Mueve al jugador

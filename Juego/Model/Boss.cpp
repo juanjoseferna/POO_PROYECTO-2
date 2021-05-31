@@ -7,6 +7,9 @@
 Boss::Boss() : Personaje(80,15){
 }
 
+Boss::~Boss(){
+}
+
 void Boss::dibujarBoss(RenderWindow *ventana, int x, int y) {//dibuja el boss en la ventana
     bossTexture.loadFromFile("../Img/enemigo2.png");
     boss.setTexture(bossTexture);

@@ -6,6 +6,9 @@
 Combate::Combate() {
 }
 
+Combate::~Combate() {
+}
+
 //Se muestra combate en la ventana del juego
 void Combate::mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo * enemigo, Inventario * inventario) {
     int danoR = 0, danoRecibido2 = 0;

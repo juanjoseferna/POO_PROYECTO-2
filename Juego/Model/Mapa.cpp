@@ -26,11 +26,11 @@ void Mapa::mostrarMapa(sf::RenderWindow *ventana, Jugador * jugador, int cantEne
         salida.setTexture(salidaTexture);
         salida.setPosition(1300,0);//Ubicacion de la textura salida del juego
         ventana->draw(spriteMapa);//dibuja el mapa en ventana
-        crearMapa(ventana, jugador);
+        ventana->draw(salida);//al chocar el jugador y la salida se finaliza el juego
         jugador->mostrarJugador(ventana);//muestra el jugador en el mapa
+        crearMapa(ventana, jugador);
         dibujarCofre(ventana);//dibuja el cofre en ventana
         colisiones(jugador, cofre);
-        ventana->draw(salida);//al chocar el jugador y la salida se finaliza el juego
         crearItems(ventana, jugador);//crear items en mapa
         crearEnemigos(ventana,jugador,cantEnemigos);//crear enemigos en mapa
         colisionSalida(ventana,jugador, &salida);//
@@ -135,7 +135,6 @@ void Mapa::crearMapa(RenderWindow *ventana, Jugador * jugador){
 
 void Mapa::colisionesEnemigo(RenderWindow * ventana, Jugador *jugador, Enemigo *enemigo) {//colision con un enemigo para entrar a combate
     if (enemigo->getVida() > 0 && jugador->getColision().intersects(enemigo->spriteEnemigo.getGlobalBounds())){
-        std::cout << "Colision enemigo" << std::endl;
         ventana->setView(ventana->getDefaultView());
         combate.mostrarCombate(ventana, jugador, enemigo, &inventario);//entra al combate
     } else {
@@ -162,19 +161,24 @@ void Mapa::abrirInventario(RenderWindow * ventana,Jugador * jugador){//abrir inv
     inventario.mostrarInventario(ventana, jugador);
 }
 
-void Mapa::crearItems(RenderWindow *ventana,Jugador * jugador){//crear items en el mapa
-    items.push_back(new Espada);
-    items[0]->pintarItem(ventana, 100, 300);//pintar items en el mapa
-    colisionItems(jugador, items[0]);//colisiones con los items
+void Mapa::crearItems(RenderWindow *ventana,Jugador * jugador) {//crear items en el mapa
     int contx = 0;
     int conty = 50;
-    for (int i = 1; i <= 2; i++) {
-        conty += 200;
-        if(conty >= alto){
-            contx += 200;
-            conty = 50;
+    items.push_back(new Espada);
+    items.push_back(new PocionesVida);
+    items.push_back(new PocionesDamage);
+    items.push_back(new Lanza);
+    items.push_back(new Artefacto);
+    for (int i = 0; i < 5; i++) {
+        conty += 500;
+        if (conty >= alto) {
+            contx += 400;
+            conty = 500;
         }
-        items.push_back(new PocionesVida);
+        if(contx >= ancho){
+            contx= 1350;
+            conty = 10;
+        }
         items[i]->pintarItem(ventana, contx, conty);//coordenadas para pintar el item
         colisionItems(jugador, items[i]);//colisionar con un item
     }
@@ -190,7 +194,6 @@ void Mapa::colisionBoss(RenderWindow * ventana, Jugador * jugador, Boss * boss){
     if (boss->getVida() > 0 && jugador->getColision().intersects(boss->boss.getGlobalBounds())){//si hay una colision con un boss
         ventana->setView(ventana->getDefaultView());
         combate.mostrarCombateBoss(ventana, jugador, boss, &inventario);//empezara en mapa el combate con el boss
-        finalizado = true;
     } else {
         return;
     }
@@ -202,7 +205,7 @@ void Mapa::colisionSalida(RenderWindow * ventana, Jugador * jugador, Sprite * sa
         Sprite finalSprite;//sprite final
         final.loadFromFile("../Img/salida.png");//carga la textura final
         finalSprite.setTexture(final);
-        while(ventana->isOpen()){
+        while(jugador->artefacto){
             ventana->clear();
             ventana->setView(ventana->getDefaultView());
             ventana->draw(finalSprite);

@@ -36,6 +36,7 @@ private:
 public:
     int cantEnemigosInfernal, cantEnemegosPesadilla;
     Ventana();
+    virtual ~Ventana();
     void crearVentana();//crea la ventana
     void menuDificultad();//el menu donde selecciona la dificultad
     RenderWindow * getVentana();

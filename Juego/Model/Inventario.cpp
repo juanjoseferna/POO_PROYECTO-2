@@ -50,7 +50,7 @@ void Inventario::mostarItemsInventario(RenderWindow * ventana) {//mostrar los it
 
 void Inventario::eliminarItem(Item * item){//eliminar un item de inventario
     int contx = 0;
-    for (int i = 0; i <= pItems.size() - 1; i++) {
+    for (int i = 0; i < pItems.size(); i++) {
         contx++;
         if(item == pItems[i]){
             pItems.erase(pItems.begin() + i);
@@ -89,7 +89,6 @@ void Inventario::botonesInventario(RenderWindow * ventana, Jugador * jugador) {/
               Mouse::getPosition(*ventana).y <= botony2){
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {
-            std::cout << "Boton3" << std::endl;
             if(pItems[2] != nullptr){
                 pItems[2]->usarItem(jugador);//usar item de la posicion 3 en inventario
             }
@@ -210,7 +209,6 @@ void Inventario::botonesInventario(RenderWindow * ventana, Jugador * jugador) {/
                Mouse::getPosition(*ventana).y <= menuSaliday2) {
         sleep(milliseconds(100));
         if (Mouse::isButtonPressed(Mouse::Left)) {//boton salir
-            std::cout << "Boton salir" << std::endl;
             salida = true;
         }
     }
@@ -219,7 +217,6 @@ void Inventario::botonesInventario(RenderWindow * ventana, Jugador * jugador) {/
 
 void Inventario::agregarItemsInventario(Item * item){//agregar un item a inventario
     if(item->getSuelo() == 1 && pItems.size() < 12) {
-        std::cout << "agregado" << std::endl;
         item->recogerItemSuelo();//recoge item del suelo
         this->pItems.push_back(item);//lo agrega al final de items
     }

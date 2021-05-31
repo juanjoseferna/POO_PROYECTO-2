@@ -7,13 +7,16 @@ PocionesVida::PocionesVida() {
     efectoPocion = 50;
 }
 
+PocionesVida::~PocionesVida(){
+}
+
 void PocionesVida::usarPocion(Jugador *jugador){
     jugador->setVida(jugador->getVida() + efectoPocion); //efecto pocion a jugador
 }
 
 void PocionesVida::cargarTexturas(){
     texturaPocionVida.loadFromFile("../Img/pocionVida.png");//carga la textura
-    spritePocion.setTexture(texturaPocionVida);
+    spriteItem.setTexture(texturaPocionVida);
 }
 
 void PocionesVida::pintarItem(RenderWindow * ventana, int x, int y){
@@ -28,7 +31,7 @@ void PocionesVida::pintarItem(RenderWindow * ventana, int x, int y){
 }
 
 FloatRect PocionesVida::getColision() {
-    return spritePocion.getGlobalBounds();
+    return spriteItem.getGlobalBounds();
 }
 
 void PocionesVida::recogerItemSuelo(){

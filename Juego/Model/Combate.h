@@ -31,6 +31,7 @@ private:
             *huir, *pociones, *danoRealizadoNumero, *danoRecibidodoNumero; //texto utilizado
 public:
     Combate();
+    virtual ~Combate();
     void mostrarCombate(RenderWindow * ventana, Jugador * jugador, Enemigo * enemigo, Inventario * inventario);
     void mostrarCombateBoss(RenderWindow * ventana, Jugador * jugador, Boss * boss, Inventario * inventario);
 };

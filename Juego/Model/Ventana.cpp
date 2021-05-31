@@ -9,6 +9,8 @@ const int Ventana::alto = 804;
 Ventana::Ventana() {
 };
 
+Ventana::~Ventana() {
+}
 
 void Ventana::menuDificultad() {
     while (!salida && ventana.isOpen()){
@@ -131,6 +133,7 @@ void Ventana::crearVentana() {
             if (evento.type == Event::Closed)
                 ventana.close();
         }
+        ventana.setFramerateLimit(120);
         ventana.display();
     }
 }

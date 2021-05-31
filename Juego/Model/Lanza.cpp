@@ -31,14 +31,14 @@ void Lanza::pintarItem(RenderWindow *ventana, int x, int y) { //pinta el arma en
 }
 
 FloatRect Lanza::getColision(){
-
+    return spriteItem.getGlobalBounds();
 }
 
 void Lanza::pintarItemInventario(RenderWindow *ventana, int x, int y){ //pintar el hacha en el inventario
-    spriteItem.setPosition(x, y);
-    cargarTexturas();
-    spriteItem.setTexture(texturaLanza);
     if (Lanza::suelo == 0){
+        cargarTexturas();
+        spriteItem.setTexture(texturaLanza);
+        spriteItem.setPosition(x, y);
         ventana->draw(spriteItem);
     } else {
         return;

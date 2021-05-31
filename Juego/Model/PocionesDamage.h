@@ -9,19 +9,20 @@
 #include "Item.h"
 #include "Jugador.h"
 
+using namespace sf;
+
 class PocionesDamage : public Item{
 private:
     int efectoPocion;
-    sf::Texture texturaPocionDamage; //textura de pocion daño
+    Texture texturaPocionDamage; //textura de pocion daño
     int suelo = 1;
 public:
-    sf::Sprite spritePocionD;
     PocionesDamage();
     virtual ~PocionesDamage(); //destructor
     void usarPocion(Jugador * jugador); //efecto pocion
     void cargarTexturas() override; //carga texturas
     void pintarItem(RenderWindow *ventana, int x, int y) override; //pintar item en pantalla
-    virtual FloatRect getColision() override; //cuando colisione con el objeto
+    FloatRect getColision() override; //cuando colisione con el objeto
     void recogerItemSuelo() override; //recoger item del suelo
     int getSuelo() override;
     void usarItem(Jugador * jugador) override; //aplicar pocion a jugador

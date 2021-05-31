@@ -15,6 +15,7 @@ private:
     Texture enemigoT;
 public:
     Enemigo();
+    virtual ~Enemigo();
     Enemigo(Enemigo *pEnemigo);
     Enemigo(int,int); //carga texturas
     Sprite spriteEnemigo;

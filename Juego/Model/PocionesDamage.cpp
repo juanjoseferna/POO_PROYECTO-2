@@ -13,7 +13,7 @@ PocionesDamage::~PocionesDamage(){
 
 void PocionesDamage::cargarTexturas(){
     texturaPocionDamage.loadFromFile("../Img/pocionFuerza.png");//carga textura
-    spritePocionD.setTexture(texturaPocionDamage);
+    spriteItem.setTexture(texturaPocionDamage);
 }
 
 void PocionesDamage::pintarItem(RenderWindow *ventana, int x, int y){
@@ -28,7 +28,7 @@ void PocionesDamage::pintarItem(RenderWindow *ventana, int x, int y){
 }
 
 FloatRect PocionesDamage::getColision() {
-    return spritePocionD.getGlobalBounds();
+    return spriteItem.getGlobalBounds();
 }
 
 int PocionesDamage::getSuelo() {
